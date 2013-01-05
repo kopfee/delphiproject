@@ -1,0 +1,12 @@
+通道对接程序安装说明
+
+本程序只支持win2003、winXp的系统。
+
+安装说明：
+1、如果系统未安装Dot Net Framework 1.1，请先执行并安装third\dotnetfx-v1.1chs.exe。如果已经安装可忽略本步骤。
+2、执行third\component\WComm_REG2003.bat，系统将自动完成通讯控件的注册。如果注册失败，请检查操作系统版本和第一步所要求的.net framework版本是否正确。
+3、根据现场实际环境设置config\device.ini中的相关配置。
+4、运行bin\yczn_c10.exe即可开始数据同步。
+
+详细的配置和使用说明：
+请参看链接：http://bug.wisdragon.com/confluence/pages/viewpage.action?pageId=1671202

@@ -1,0 +1,103 @@
+DROP INDEX YKT_CUR.IDX_STUEMPNO;
+
+DROP TABLE YKT_CUR.T_PHOTO CASCADE CONSTRAINTS;
+
+/*==============================================================*/
+/* Table: T_PHOTO                                               */
+/*==============================================================*/
+CREATE TABLE YKT_CUR.T_PHOTO  (
+   CUSTID               INTEGER                         NOT NULL,
+   STUEMPNO             VARCHAR(30),
+   PHOTO                BLOB,
+   MINPHOTO	BLOB,
+   PHOTODATE            VARCHAR(8),
+   PHOTOTIME            VARCHAR(6),
+   IFCARD               CHAR(1),
+   MAKECARDDATE         VARCHAR(8),
+   MAKECARDTIME         VARCHAR(6),
+   PHOTOEXACTTIME       VARCHAR(30),
+   primary key(CUSTID)
+);
+
+COMMENT ON TABLE YKT_CUR.T_PHOTO IS
+'T_PHOTO-照片表';
+
+COMMENT ON COLUMN YKT_CUR.T_PHOTO.CUSTID IS
+'客户号';
+
+COMMENT ON COLUMN YKT_CUR.T_PHOTO.STUEMPNO IS
+'学工号';
+
+COMMENT ON COLUMN YKT_CUR.T_PHOTO.PHOTO IS
+'照片';
+
+COMMENT ON COLUMN YKT_CUR.T_PHOTO.PHOTODATE IS
+'拍照日期';
+
+COMMENT ON COLUMN YKT_CUR.T_PHOTO.PHOTOTIME IS
+'拍照时间';
+
+COMMENT ON COLUMN YKT_CUR.T_PHOTO.IFCARD IS
+'是否有卡';
+
+COMMENT ON COLUMN YKT_CUR.T_PHOTO.MAKECARDDATE IS
+'制卡日期';
+
+COMMENT ON COLUMN YKT_CUR.T_PHOTO.MAKECARDTIME IS
+'制卡时间';
+
+COMMENT ON COLUMN YKT_CUR.T_PHOTO.PHOTOEXACTTIME IS
+'PHOTOEXACTTIME';
+
+/*==============================================================*/
+/* Index: IDX_STUEMPNO                                          */
+/*==============================================================*/
+CREATE INDEX YKT_CUR.IDX_STUEMPNO ON YKT_CUR.T_PHOTO (STUEMPNO ASC);
+
+DROP TABLE YKT_CUR.T_PHOTOLIMIT CASCADE CONSTRAINTS;
+
+/*==============================================================*/
+/* Table: T_PHOTOLIMIT                                          */
+/*==============================================================*/
+CREATE TABLE YKT_CUR.T_PHOTOLIMIT  (
+   OPERCODE             VARCHAR(10)                     NOT NULL,
+   OPERNAME             VARCHAR(60),
+   OPERPWD              VARCHAR(64),
+   OPERLIMIT            VARCHAR(60),
+   ENABLED              CHAR(1),
+   BEGINDATE            VARCHAR(16),
+   ENDDATE              VARCHAR(16),
+   REMARK               VARCHAR(240),
+   primary key(OPERCODE)
+);
+
+COMMENT ON TABLE YKT_CUR.T_PHOTOLIMIT IS
+'T_PHOTOLIMIT-照片权限表';
+
+COMMENT ON COLUMN YKT_CUR.T_PHOTOLIMIT.OPERCODE IS
+'操作员号';
+
+COMMENT ON COLUMN YKT_CUR.T_PHOTOLIMIT.OPERNAME IS
+'操作员名称';
+
+COMMENT ON COLUMN YKT_CUR.T_PHOTOLIMIT.OPERPWD IS
+'操作员密码';
+
+COMMENT ON COLUMN YKT_CUR.T_PHOTOLIMIT.OPERLIMIT IS
+'权限';
+
+COMMENT ON COLUMN YKT_CUR.T_PHOTOLIMIT.ENABLED IS
+'是否可用';
+
+COMMENT ON COLUMN YKT_CUR.T_PHOTOLIMIT.BEGINDATE IS
+'生效日期';
+
+COMMENT ON COLUMN YKT_CUR.T_PHOTOLIMIT.ENDDATE IS
+'失效日期';
+
+COMMENT ON COLUMN YKT_CUR.T_PHOTOLIMIT.REMARK IS
+'备注';
+
+
+insert into YKT_CUR.T_PHOTOLIMIT(OPERCODE, OPERNAME, OPERPWD,OPERLIMIT)
+values('admin','admin','0600000000000000D5F6DF38C95B167941536E82DF9232F3','11111111111111111111111111');

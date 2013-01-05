@@ -1,0 +1,31 @@
+object frmWait: TfrmWait
+  Left = 413
+  Top = 232
+  BorderStyle = bsNone
+  BorderWidth = 2
+  Caption = 'frmWait'
+  ClientHeight = 36
+  ClientWidth = 482
+  Color = clGradientActiveCaption
+  Font.Charset = GB2312_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -32
+  Font.Name = #26032#23435#20307
+  Font.Style = [fsBold]
+  FormStyle = fsStayOnTop
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 33
+  object lblPrompt: TLabel
+    Left = 0
+    Top = 0
+    Width = 482
+    Height = 36
+    Align = alClient
+    Alignment = taCenter
+    Caption = #25351#20196#25191#34892#20013#65292#35831#31245#21518'...'
+  end
+end

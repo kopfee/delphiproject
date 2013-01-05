@@ -1,0 +1,4 @@
+decks
+patios
+patio
+deck

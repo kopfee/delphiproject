@@ -1,0 +1,249 @@
+object frmCustImport: TfrmCustImport
+  Left = 203
+  Top = 130
+  BorderStyle = bsDialog
+  Caption = #20154#21592#20449#24687#23548#20837
+  ClientHeight = 453
+  ClientWidth = 638
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  OnDestroy = FormDestroy
+  PixelsPerInch = 96
+  TextHeight = 13
+  object dbgrdhDb: TDBGridEh
+    Left = 0
+    Top = 0
+    Width = 638
+    Height = 265
+    Align = alClient
+    Ctl3D = True
+    DataSource = dsOpen
+    Flat = True
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = #23435#20307
+    Font.Style = []
+    FooterColor = clWindow
+    FooterFont.Charset = ANSI_CHARSET
+    FooterFont.Color = clNavy
+    FooterFont.Height = -13
+    FooterFont.Name = #23435#20307
+    FooterFont.Style = []
+    Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit]
+    ParentCtl3D = False
+    ParentFont = False
+    ReadOnly = True
+    RowLines = 1
+    TabOrder = 0
+    TitleFont.Charset = ANSI_CHARSET
+    TitleFont.Color = clNavy
+    TitleFont.Height = -15
+    TitleFont.Name = #23435#20307
+    TitleFont.Style = []
+  end
+  object pb1: TProgressBar
+    Left = 0
+    Top = 437
+    Width = 638
+    Height = 16
+    Align = alBottom
+    TabOrder = 3
+  end
+  object grp2: TGroupBox
+    Left = 0
+    Top = 376
+    Width = 638
+    Height = 61
+    Align = alBottom
+    Caption = #22522#26412#25805#20316
+    Color = 16053492
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = #23435#20307
+    Font.Style = []
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 2
+    object lbl1: TLabel
+      Left = 8
+      Top = 35
+      Width = 52
+      Height = 13
+      AutoSize = False
+      Caption = #34920#21333#21517#65306
+    end
+    object Label1: TLabel
+      Left = 8
+      Top = 15
+      Width = 65
+      Height = 13
+      AutoSize = False
+      Caption = #25991#20214#36335#24452#65306
+    end
+    object lblFilePath: TLabel
+      Left = 72
+      Top = 15
+      Width = 441
+      Height = 13
+      AutoSize = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clBlue
+      Font.Height = -13
+      Font.Name = #23435#20307
+      Font.Style = []
+      ParentFont = False
+    end
+    object edtSheetName: TEdit
+      Left = 54
+      Top = 31
+      Width = 115
+      Height = 21
+      TabOrder = 5
+    end
+    object btnOpenExcel: TBitBtn
+      Left = 224
+      Top = 28
+      Width = 75
+      Height = 25
+      Caption = #25171#24320'Excel'
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #23435#20307
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 0
+      OnClick = btnOpenExcelClick
+    end
+    object btnCloseExcel: TBitBtn
+      Left = 464
+      Top = 28
+      Width = 75
+      Height = 25
+      Caption = #20851#38381'Excel'
+      Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #23435#20307
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 3
+      OnClick = btnCloseExcelClick
+    end
+    object btnImport: TBitBtn
+      Left = 384
+      Top = 28
+      Width = 75
+      Height = 25
+      Caption = #23548#20837#25968#25454
+      Enabled = False
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #23435#20307
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 2
+      OnClick = btnImportClick
+    end
+    object btnExit: TBitBtn
+      Left = 544
+      Top = 28
+      Width = 75
+      Height = 25
+      Caption = #36864' '#20986
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #23435#20307
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 4
+      OnClick = btnExitClick
+    end
+    object btnQueryData: TBitBtn
+      Left = 304
+      Top = 28
+      Width = 75
+      Height = 25
+      Caption = #26597#35810#25968#25454
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #23435#20307
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 1
+      OnClick = btnQueryDataClick
+    end
+  end
+  object grp1: TGroupBox
+    Left = 0
+    Top = 265
+    Width = 638
+    Height = 111
+    Align = alBottom
+    Caption = #38169#35823#20449#24687
+    Color = 16053492
+    ParentColor = False
+    TabOrder = 1
+    object mmo1: TMemo
+      Left = 2
+      Top = 15
+      Width = 535
+      Height = 94
+      Align = alLeft
+      ReadOnly = True
+      ScrollBars = ssBoth
+      TabOrder = 0
+    end
+    object BitBtn1: TBitBtn
+      Left = 544
+      Top = 76
+      Width = 75
+      Height = 25
+      Caption = #20449#24687#21478#23384
+      Font.Charset = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = #23435#20307
+      Font.Style = [fsBold]
+      ParentFont = False
+      TabOrder = 1
+      OnClick = BitBtn1Click
+    end
+  end
+  object dsOpen: TDataSource
+    DataSet = qryOpen
+    Left = 200
+    Top = 104
+  end
+  object conOpen: TADOConnection
+    LoginPrompt = False
+    Left = 240
+    Top = 104
+  end
+  object qryOpen: TADOQuery
+    Connection = conOpen
+    Parameters = <>
+    Left = 280
+    Top = 104
+  end
+  object dlgOpen: TOpenDialog
+    Left = 200
+    Top = 152
+  end
+  object dlgSave: TSaveDialog
+    Left = 248
+    Top = 152
+  end
+end

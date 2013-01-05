@@ -1,0 +1,4 @@
+currency
+exchange
+converter
+trading

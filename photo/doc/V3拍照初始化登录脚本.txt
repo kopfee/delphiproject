@@ -1,0 +1,11 @@
+insert into YKT_CUR.T_PHOTOLIMIT(OPERCODE, OPERNAME, OPERPWD,OPERLIMIT)
+values('admin','admin','0600000000000000D5F6DF38C95B167941536E82DF9232F3','11111111111111111111111111');
+commit;
+--用户名admin	密码123456
+
+--如果拍照保存时报错，执行以下脚本
+-- Add/modify columns 
+alter table T_PHOTO add MINPHOTO blob;
+-- Add comments to the columns 
+comment on column T_PHOTO.MINPHOTO
+  is '小照片';

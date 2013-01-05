@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CardEngine>
+    <Startup>   
+      <!--
+      <SysPara name="rwcard" type="Device" value="Integram.dll" comment="数智国兴手机读卡器" />
+      <SysPara name="cmccPsamCard" type="PsamCard" value="CmccPsamCard.dll" comment="移动PSAM卡" reference="cpuKeyCard" />
+      <SysPara name="cmccUserCard" type="UserCard" value="CmccUserCard.dll" comment="移动手机卡" />
+      -->
+      <SysPara name="decard" type="Device" value="Decard.dll" comment="德卡读卡器" />   
+      <SysPara name="mfKeyCard" type="KeyCard" value="MFKeyCard.dll" comment="S70密钥卡" />
+      <SysPara name="cpuKeyCard" type="KeyCard" value="CPUKeyCard.dll" comment="CPU密钥卡" />    
+      <SysPara name="psamCard" type="PsamCard" value="PsamCard.dll" comment="毅能达PSAM卡" reference="cpuKeyCard" />
+      <SysPara name="mfUserCard" type="UserCard" value="MFUserCard.dll" comment="S50用户卡" reference="mfKeyCard" />
+      <SysPara name="cpuUserCard" type="UserCard" value="CPUUserCard.dll" comment="CPU7+1用户卡" reference="cpuKeyCard" mfpart="mfUserCard" />
+      <SysPara name="splusService" type="BusinessService" value="SplusClient.dll" comment="后台功能服务" />
+    </Startup>
+    <!--读卡器配置信息-->
+    <Device>
+      <SysPara name="port" value="100"  comment="读卡器端口号" />
+      <SysPara name="baud" value="9600" comment="波特率" />
+      <SysPara name="psamSlot" value="1" comment="PSAM卡插槽" />
+    </Device>
+    <!--PSAM卡配置-->
+    <PsamCard>
+      <SysPara name="enterpriceCode" value="160000000044"  comment="中国移动企业ID号" />
+      <SysPara name="enterpriceAppId" value="144"  comment="中国移动企业自定义应用ID" />
+    </PsamCard>
+    <!--密钥卡配置-->
+    <KeyCard>
+    </KeyCard>
+    <!--用户卡配置-->
+    <UserCard>
+      <SysPara name="initLoginKey" value="FFFFFFFFFFFF" comment="M1卡出厂密钥" />
+      <SysPara name="keyAlg" value="0" comment="M1卡密钥算法[0-通过密钥卡计算;1-通过PSAM卡计算;2-使用移动PSAM卡计算]" />
+      <SysPara name="maxSect" value="15" comment="MF卡初始化最大扇区号，[minSect,maxSect]" />
+      <SysPara name="minSect" value="0" comment="MF卡初始化最小扇区号" />
+      <SysPara name="hdWaterWalletSect" value="14" comment="汇多水控钱包扇区号" />
+      <SysPara name="hdWaterParamSect" value="15" comment="汇多参数卡扇区号" />
+      <SysPara name="hdWaterWalletSeedKey" value="995667a1b2c30000" comment="汇多水控钱包种子密钥" />
+      <SysPara name="hdWaterParamKeya" value="2355337812AB" comment="汇多参数卡keya" />
+      <SysPara name="hdWaterParamKeyb" value="342235234534" comment="汇多参数卡keyb" />
+      <SysPara name="xtWaterWalletSect" value="2" comment="新天水控钱包扇区号" />
+      <SysPara name="xtWaterWalletMaxMoney" value="200000" comment="新天水控钱包金额上限(分)" />
+      <SysPara name="xtWaterParamKeya" value="010203040506" comment="新天水控参数卡keya" />
+      <SysPara name="xtWaterParamKeyb" value="342235234534" comment="新天水控参数卡keyb" />
+      <SysPara name="enterpriceCode" value="160000000044"  comment="中国移动企业ID号" />
+      <SysPara name="enterpriceAppId" value="144"  comment="中国移动企业自定义应用ID" />
+    </UserCard>
+    <!--后台服务配置-->
+    <BusinessService>
+      <SysPara name="serviceProxy" value="WisdragonIceSync:default -h 127.0.0.1  -p 1700" comment="后台服务请求地址" />
+      <SysPara name="appver" value="v1.0" comment="后台版本号" />
+      <SysPara name="src" value="splusclient" comment="请求源标识" />
+      <SysPara name="des" value="splusserver" comment="请求目的地标识" />
+    </BusinessService>
+    <KsCardInterface>
+      <SysPara name="termId" value="248" comment="设备ID，用于设备签到和扣费" />
+    </KsCardInterface>
+</CardEngine>
