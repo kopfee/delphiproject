@@ -1,0 +1,26 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = TestDesignDLL.exe RPCBDLL.dll SimpleCallDLL.exe
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+TestDesignDLL.exe: TestDesignDLL.dpr
+  $(DCC)
+
+RPCBDLL.dll: ..\RPCBDLL.dpr
+  $(DCC)
+
+SimpleCallDLL.exe: SimpleCallDLL.dpr
+  $(DCC)
+
+

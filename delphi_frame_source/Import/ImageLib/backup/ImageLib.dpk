@@ -1,0 +1,40 @@
+package ImageLib;
+
+{$R *.RES}
+{$R 'ImageLib.dcr'}
+{$ALIGN ON}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $00400000}
+{$DESCRIPTION 'ImageLib'}
+{$IMPLICITBUILD OFF}
+
+requires
+  vcl40,
+  VCLX40,
+  USER;
+
+contains
+  ImageLibX in 'ImageLibX.pas',
+  ImgLibObjs in 'ImgLibObjs.pas',
+  RegImgLibObjs in 'RegImgLibObjs.pas',
+  DLGImgObjPropEd in 'DLGImgObjPropEd.pas' {dlgImgObjpropEditor};
+
+end.

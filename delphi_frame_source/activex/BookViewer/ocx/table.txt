@@ -1,0 +1,655 @@
+Turbo Dump  Version 5.0.16.6 Copyright (c) 1988, 1999 Inprise Corporation
+                      Display of File PDG.OCX
+
+Old Executable Header
+
+DOS File Size                                      1D200h  (119296. )
+Load Image Size                                      450h  (  1104. )
+Relocation Table entry count                          0000h  (     0. )
+Relocation Table address                              0040h  (    64. )
+Size of header record      (in paragraphs)            0004h  (     4. )
+Minimum Memory Requirement (in paragraphs)            0000h  (     0. )
+Maximum Memory Requirement (in paragraphs)            FFFFh  ( 65535. )
+File load checksum                                    0000h  (     0. )
+Overlay Number                                        0000h  (     0. )
+
+Initial Stack Segment  (SS:SP)			  0000:00B8
+Program Entry Point    (CS:IP)			  0000:0000
+
+
+Portable Executable (PE) File
+
+Header base: 00000080
+
+CPU type                 80386
+Flags                    210E [ executable backwards 32bit library ]
+DLL flags                0000 [ ]
+Linker Version           5.0
+Time stamp               36846434 : Sat Dec 26 12:21:08 1998
+O/S Version              4.0
+User Version             0.0
+Subsystem Version        4.0
+Subsystem                0002 [ Windows GUI ]
+Object count             00000006
+Symbols offset           00000000
+Symbols count            00000000
+Optional header size     00E0
+Magic #                  10B
+Code size                00013E00
+Init Data size           0000A200
+Uninit Data size         00000000
+Entry RVA                00014360
+Image base               10000000
+Code base                00001000
+Data base                00015000
+Object/File align        00001000/00000200
+Reserved                 00000000
+Image size               00020000
+Header size              00000400
+Checksum                 00000000
+Stack reserve/commit     00100000/00001000
+Heap reserve/commit      00100000/00001000
+Number interesting RVAs  00000010
+Name                   RVA       Size  
+------------------  --------  --------
+Exports             000168C0  000000A0
+Imports             00019000  000000C8
+Resources           0001A000  00004E64
+Exceptions          00000000  00000000
+Security            00000000  00000000
+Fixups              0001F000  00000BA4
+Debug               00000000  00000000
+Description         00000000  00000000
+TLS                 00000000  00000000
+Callbacks           00000000  00000000
+reserved            00000000  00000000
+reserved            0001968C  000005C4
+reserved            00000000  00000000
+reserved            00000000  00000000
+reserved            00000000  00000000
+
+Object table:
+#   Name      VirtSize    RVA     PhysSize  Phys off  Flags   
+--  --------  --------  --------  --------  --------  --------
+01  .text     00013C2A  00001000  00013E00  00000400  60000020 [CER]
+02  .rdata    00001960  00015000  00001A00  00014200  40000040 [IR]
+03  .data     0000165C  00017000  00000600  00015C00  C0000040 [IRW]
+04  .idata    00000F72  00019000  00001000  00016200  C0000040 [IRW]
+05  .rsrc     00004E64  0001A000  00005000  00017200  40000040 [IR]
+06  .reloc    00000E22  0001F000  00001000  0001C200  42000040 [DIR]
+
+Key to section flags:
+  C - contains code
+  D - discardable
+  E - executable
+  I - contains initialized data
+  R - readable
+  W - writeable
+
+******************************************************************************
+Section:             Import
+  ImportLookUpTblRVA:00019660
+  Time Stamp:        00000000
+  Forwarder Chain:   00000000 (index of first forwarder reference)
+
+Imports from WININET.dll
+    (hint = 004F) InternetOpenUrlA
+    (hint = 0055) InternetReadFile
+    (hint = 003A) InternetCloseHandle
+    (hint = 004E) InternetOpenA
+    (hint = 0061) InternetWriteFile
+    (hint = 0058) InternetSetFilePointer
+
+Imports from MFC42.DLL
+    (ord. = 3136)
+    (ord. = 3262)
+    (ord. = 2985)
+    (ord. = 3081)
+    (ord. = 2976)
+    (ord. = 3830)
+    (ord. = 4465)
+    (ord. = 3831)
+    (ord. = 3825)
+    (ord. = 3079)
+    (ord. = 4080)
+    (ord. = 4622)
+    (ord. = 4424)
+    (ord. =  800)
+    (ord. =  817)
+    (ord. =  540)
+    (ord. =  565)
+    (ord. =  825)
+    (ord. =  858)
+    (ord. = 2414)
+    (ord. =  535)
+    (ord. = 2726)
+    (ord. = 4226)
+    (ord. =  640)
+    (ord. = 2405)
+    (ord. = 5785)
+    (ord. = 1640)
+    (ord. =  323)
+    (ord. = 3571)
+    (ord. = 3626)
+    (ord. = 1641)
+    (ord. = 3663)
+    (ord. = 1567)
+    (ord. = 3147)
+    (ord. = 3259)
+    (ord. =  815)
+    (ord. = 6375)
+    (ord. = 4486)
+    (ord. = 2554)
+    (ord. = 2512)
+    (ord. = 5731)
+    (ord. = 3922)
+    (ord. = 1089)
+    (ord. = 5199)
+    (ord. = 5302)
+    (ord. = 4698)
+    (ord. = 5714)
+    (ord. = 3401)
+    (ord. = 3670)
+    (ord. =  561)
+    (ord. = 3952)
+    (ord. = 2724)
+    (ord. = 6354)
+    (ord. =  599)
+    (ord. = 1216)
+    (ord. = 1168)
+    (ord. = 1243)
+    (ord. = 1227)
+    (ord. = 6042)
+    (ord. = 3230)
+    (ord. = 5959)
+    (ord. = 3119)
+    (ord. = 5492)
+    (ord. = 1877)
+    (ord. = 4249)
+    (ord. = 2486)
+    (ord. = 1138)
+    (ord. = 6364)
+    (ord. = 4472)
+    (ord. =  268)
+    (ord. = 2687)
+    (ord. = 3353)
+    (ord. = 3681)
+    (ord. =  446)
+    (ord. =  743)
+    (ord. = 1177)
+    (ord. = 1226)
+    (ord. = 1210)
+    (ord. = 1573)
+    (ord. = 2439)
+    (ord. = 1693)
+    (ord. = 5618)
+    (ord. =  994)
+    (ord. = 4342)
+    (ord. = 4687)
+    (ord. = 4639)
+    (ord. = 5674)
+    (ord. = 2156)
+    (ord. = 4856)
+    (ord. = 4920)
+    (ord. = 6002)
+    (ord. = 2137)
+    (ord. = 1963)
+    (ord. = 5213)
+    (ord. = 2953)
+    (ord. = 3868)
+    (ord. = 5150)
+    (ord. = 4705)
+    (ord. = 4707)
+    (ord. = 2876)
+    (ord. = 2998)
+    (ord. = 5649)
+    (ord. = 4113)
+    (ord. = 4661)
+    (ord. = 4660)
+    (ord. = 4768)
+    (ord. = 4650)
+    (ord. = 4903)
+    (ord. = 4548)
+    (ord. = 4521)
+    (ord. = 4594)
+    (ord. = 4988)
+    (ord. = 4925)
+    (ord. = 4930)
+    (ord. = 4935)
+    (ord. = 4659)
+    (ord. = 4909)
+    (ord. = 4908)
+    (ord. = 4668)
+    (ord. = 4667)
+    (ord. = 4666)
+    (ord. = 4648)
+    (ord. = 4689)
+    (ord. = 5023)
+    (ord. = 4654)
+    (ord. = 4643)
+    (ord. = 4354)
+    (ord. = 4780)
+    (ord. = 4649)
+    (ord. = 4637)
+    (ord. = 4636)
+    (ord. = 5060)
+    (ord. = 4584)
+    (ord. = 4371)
+    (ord. = 4361)
+    (ord. = 4356)
+    (ord. = 5498)
+    (ord. = 4741)
+    (ord. = 4738)
+    (ord. = 4409)
+    (ord. = 4603)
+    (ord. = 5008)
+    (ord. = 3278)
+    (ord. = 5289)
+    (ord. = 4979)
+    (ord. = 2488)
+    (ord. = 3404)
+    (ord. = 4539)
+    (ord. = 2954)
+    (ord. = 6055)
+    (ord. = 4078)
+    (ord. = 1776)
+    (ord. = 4407)
+    (ord. = 5241)
+    (ord. = 2384)
+    (ord. = 5163)
+    (ord. = 6370)
+    (ord. = 4353)
+    (ord. = 5290)
+    (ord. = 3798)
+    (ord. = 4837)
+    (ord. = 4441)
+    (ord. = 2648)
+    (ord. = 2055)
+    (ord. = 6376)
+    (ord. = 4699)
+    (ord. = 5065)
+    (ord. = 1727)
+    (ord. = 5261)
+    (ord. = 2446)
+    (ord. = 2124)
+    (ord. = 5277)
+    (ord. = 2983)
+    (ord. = 3148)
+    (ord. = 3260)
+    (ord. = 4466)
+    (ord. = 3269)
+    (ord. = 2986)
+    (ord. = 3080)
+    (ord. = 4081)
+    (ord. = 4624)
+    (ord. = 5825)
+    (ord. =  723)
+    (ord. =  860)
+    (ord. = 3946)
+    (ord. =  423)
+    (ord. = 2754)
+    (ord. = 6281)
+    (ord. = 5334)
+    (ord. = 5328)
+    (ord. = 5316)
+    (ord. = 2541)
+    (ord. = 4949)
+    (ord. =  641)
+    (ord. = 2514)
+    (ord. = 6030)
+    (ord. = 4204)
+    (ord. = 5710)
+    (ord. = 4129)
+    (ord. = 2256)
+    (ord. = 4025)
+    (ord. = 2795)
+    (ord. = 1146)
+    (ord. = 2753)
+    (ord. = 2379)
+    (ord. = 4502)
+    (ord. = 3057)
+    (ord. = 4459)
+    (ord. = 4760)
+    (ord. = 5888)
+    (ord. = 4765)
+    (ord. = 5573)
+    (ord. = 2934)
+    (ord. = 4788)
+    (ord. = 5033)
+    (ord. = 1601)
+    (ord. = 4982)
+    (ord. = 6115)
+    (ord. = 3556)
+    (ord. = 2818)
+    (ord. = 4278)
+    (ord. = 4913)
+    (ord. = 2859)
+    (ord. = 1892)
+    (ord. = 4252)
+    (ord. = 3326)
+    (ord. = 6365)
+    (ord. = 1212)
+    (ord. = 4570)
+    (ord. = 4672)
+    (ord. = 4843)
+    (ord. = 5011)
+    (ord. = 5265)
+    (ord. = 4376)
+    (ord. = 4853)
+    (ord. = 4998)
+    (ord. = 4713)
+    (ord. = 6052)
+    (ord. = 1775)
+    (ord. = 2385)
+    (ord. = 6371)
+    (ord. = 5286)
+    (ord. = 4438)
+    (ord. = 3279)
+    (ord. = 4625)
+    (ord. = 4425)
+    (ord. =  449)
+    (ord. =  746)
+    (ord. = 2278)
+    (ord. = 5466)
+    (ord. = 5465)
+    (ord. = 6407)
+    (ord. = 2917)
+    (ord. = 2808)
+    (ord. = 6317)
+    (ord. = 4182)
+    (ord. = 6010)
+    (ord. = 2606)
+    (ord. = 3180)
+    (ord. = 3183)
+    (ord. = 3511)
+    (ord. = 3724)
+    (ord. =  798)
+    (ord. =  533)
+    (ord. = 1262)
+    (ord. =  537)
+    (ord. = 4202)
+    (ord. = 6385)
+    (ord. =  665)
+    (ord. = 1979)
+    (ord. = 5186)
+    (ord. =  354)
+    (ord. = 4710)
+    (ord. = 6374)
+    (ord. = 5280)
+    (ord. = 4627)
+    (ord. = 3597)
+    (ord. =  324)
+    (ord. = 4234)
+    (ord. = 1200)
+    (ord. = 4079)
+    (ord. = 5303)
+    (ord. = 5300)
+    (ord. = 3346)
+    (ord. = 2396)
+    (ord. = 1948)
+    (ord. =  823)
+    (ord. = 2982)
+    (ord. = 5715)
+    (ord. = 4415)
+    (ord. = 5307)
+    (ord. = 4992)
+    (ord. = 4739)
+    (ord. = 3749)
+    (ord. = 1176)
+    (ord. = 6412)
+    (ord. =  826)
+    (ord. = 1131)
+    (ord. =  600)
+    (ord. = 1132)
+    (ord. = 1116)
+    (ord. = 1577)
+    (ord. = 1182)
+    (ord. =  342)
+    (ord. = 1197)
+    (ord. = 1570)
+    (ord. = 1253)
+    (ord. = 1255)
+    (ord. = 1578)
+    (ord. = 1575)
+    (ord. =  269)
+
+Imports from MSVCRT.dll
+    (hint = 0238) atoi
+    (hint = 02E1) wcslen
+    (hint = 0042) _EH_prolog
+    (hint = 0049) __CxxFrameHandler
+    (hint = 0259) free
+    (hint = 028C) malloc
+    (hint = 0055) __dllonexit
+    (hint = 02E4) wcsncpy
+    (hint = 000E) ??1type_info@@UAE@XZ
+    (hint = 010B) _initterm
+    (hint = 0181) _onexit
+    (hint = 009A) _adjust_fdiv
+
+Imports from KERNEL32.dll
+    (hint = 023F) Sleep
+    (hint = 02A1) lstrlenA
+    (hint = 019A) LocalFree
+    (hint = 0196) LocalAlloc
+    (hint = 0233) SetThreadPriority
+
+Imports from USER32.dll
+    (hint = 00B2) EnableWindow
+    (hint = 01EC) SetCursor
+    (hint = 0172) LoadCursorA
+    (hint = 0152) InvalidateRect
+    (hint = 0101) GetKeyState
+    (hint = 0251) UpdateWindow
+    (hint = 0216) SetTimer
+    (hint = 016D) KillTimer
+    (hint = 0170) LoadBitmapA
+
+Imports from GDI32.dll
+    (hint = 000A) BitBlt
+    (hint = 017B) StartDocA
+    (hint = 004C) EndDoc
+    (hint = 017D) StartPage
+    (hint = 004D) EndPage
+    (hint = 0046) DeleteObject
+    (hint = 0020) CreateDCA
+    (hint = 00EA) GetObjectA
+    (hint = 001F) CreateCompatibleDC
+    (hint = 0157) SetDIBits
+    (hint = 001E) CreateCompatibleBitmap
+    (hint = 014E) SetBitmapBits
+    (hint = 0019) CreateBitmap
+
+Imports from comdlg32.dll
+    (hint = 0010) PrintDlgA
+
+Imports from ole32.dll
+    (hint = 000C) CoCreateInstance
+
+Imports from OLEAUT32.dll
+    (ord. =    2)
+    (ord. =  162)
+
+******************************************************************************
+Section:             Exports
+  Flags:             00000000
+  Time Stamp:        36846432 : Sat Dec 26 12:21:06 1998
+  Major Version:     0000
+  Minor Version:     0000
+
+Exports from PDG.OCX
+  4 exported name(s), 4 export addresse(s).  Ordinal base is 1.
+  Sorted by Name:
+    RVA      Ord. Hint Name
+    -------- ---- ---- ----
+    000144D5    1 0000 DllCanUnloadNow
+    0001448A    2 0001 DllGetClassObject
+    00010190    3 0002 DllRegisterServer
+    00010250    4 0003 DllUnregisterServer
+
+******************************************************************************
+Section:             Resources
+  Flags:             00000000
+  Time Stamp:        3684642D : Sat Dec 26 12:21:01 1998
+  Major Version:     0000
+  Minor Version:     0000
+
+Resources:
+Type          Name                   Lang Id
+--------------------------------------------
+[1 named entries, 8 ID entries]
+TYPELIB  (next directory @00000058)
+
+              [0 named entries, 1 ID entries]
+              type: Cursor (1)  (next directory @00000158)
+
+                                     [0 named entries, 1 ID entries]
+                                     type: Unknown (2052)  (data @000002A8)
+                                         Offset:    0001DE8C
+                                         Size:      00000F50
+                                         Code Page: 00000000
+                                         Reserved:  00000000
+
+type: Cursor (1)  (next directory @00000070)
+
+              [0 named entries, 2 ID entries]
+              type: Bitmap (2)  (next directory @00000170)
+
+                                     [0 named entries, 1 ID entries]
+                                     type: Unknown (2052)  (data @000002B8)
+                                         Offset:    0001DBFC
+                                         Size:      00000134
+                                         Code Page: 00000000
+                                         Reserved:  00000000
+
+              type: Icon (3)  (next directory @00000188)
+
+                                     [0 named entries, 1 ID entries]
+                                     type: Unknown (2052)  (data @000002C8)
+                                         Offset:    0001DD44
+                                         Size:      00000134
+                                         Code Page: 00000000
+                                         Reserved:  00000000
+
+type: Bitmap (2)  (next directory @00000090)
+
+              [0 named entries, 2 ID entries]
+              type: Cursor (1)  (next directory @000001A0)
+
+                                     [0 named entries, 1 ID entries]
+                                     type: Unknown (2052)  (data @000002D8)
+                                         Offset:    0001A9F4
+                                         Size:      00000528
+                                         Code Page: 00000000
+                                         Reserved:  00000000
+
+              type: Unknown (202)  (next directory @000001B8)
+
+                                     [0 named entries, 1 ID entries]
+                                     type: Unknown (2052)  (data @000002E8)
+                                         Offset:    0001AF1C
+                                         Size:      00002B38
+                                         Code Page: 00000000
+                                         Reserved:  00000000
+
+type: Icon (3)  (next directory @000000B0)
+
+              [0 named entries, 1 ID entries]
+              type: Cursor (1)  (next directory @000001D0)
+
+                                     [0 named entries, 1 ID entries]
+                                     type: Unknown (2052)  (data @000002F8)
+                                         Offset:    0001A6F8
+                                         Size:      000002E8
+                                         Code Page: 00000000
+                                         Reserved:  00000000
+
+type: Dialog (5)  (next directory @000000C8)
+
+              [0 named entries, 2 ID entries]
+              type: Cursor (1)  (next directory @000001E8)
+
+                                     [0 named entries, 1 ID entries]
+                                     type: Unknown (2052)  (data @00000308)
+                                         Offset:    0001DA54
+                                         Size:      00000170
+                                         Code Page: 00000000
+                                         Reserved:  00000000
+
+              type: Unknown (200)  (next directory @00000200)
+
+                                     [0 named entries, 1 ID entries]
+                                     type: Unknown (2052)  (data @00000318)
+                                         Offset:    0001DBC4
+                                         Size:      00000036
+                                         Code Page: 00000000
+                                         Reserved:  00000000
+
+type: String Table (6)  (next directory @000000E8)
+
+              [0 named entries, 2 ID entries]
+              type: Cursor (1)  (next directory @00000218)
+
+                                     [0 named entries, 1 ID entries]
+                                     type: Unknown (2052)  (data @00000328)
+                                         Offset:    0001EDDC
+                                         Size:      00000058
+                                         Code Page: 00000000
+                                         Reserved:  00000000
+
+              type: Unknown (13)  (next directory @00000230)
+
+                                     [0 named entries, 1 ID entries]
+                                     type: Unknown (2052)  (data @00000338)
+                                         Offset:    0001EE34
+                                         Size:      0000002E
+                                         Code Page: 00000000
+                                         Reserved:  00000000
+
+type: Group Cursor (12)  (next directory @00000108)
+
+              [0 named entries, 2 ID entries]
+              type: Unknown (203)  (next directory @00000248)
+
+                                     [0 named entries, 1 ID entries]
+                                     type: Unknown (2052)  (data @00000348)
+                                         Offset:    0001DD30
+                                         Size:      00000014
+                                         Code Page: 00000000
+                                         Reserved:  00000000
+
+              type: Unknown (204)  (next directory @00000260)
+
+                                     [0 named entries, 1 ID entries]
+                                     type: Unknown (2052)  (data @00000358)
+                                         Offset:    0001DE78
+                                         Size:      00000014
+                                         Code Page: 00000000
+                                         Reserved:  00000000
+
+type: Group Icon (14)  (next directory @00000128)
+
+              [0 named entries, 1 ID entries]
+              type: Cursor (1)  (next directory @00000278)
+
+                                     [0 named entries, 1 ID entries]
+                                     type: Unknown (2052)  (data @00000368)
+                                         Offset:    0001A9E0
+                                         Size:      00000014
+                                         Code Page: 00000000
+                                         Reserved:  00000000
+
+type: Version (16)  (next directory @00000140)
+
+              [0 named entries, 1 ID entries]
+              type: Cursor (1)  (next directory @00000290)
+
+                                     [0 named entries, 1 ID entries]
+                                     type: Unknown (2052)  (data @00000378)
+                                         Offset:    0001A3A0
+                                         Size:      00000358
+                                         Code Page: 00000000
+                                         Reserved:  00000000
+
+
+

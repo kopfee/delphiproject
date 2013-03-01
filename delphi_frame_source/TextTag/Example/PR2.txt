@@ -1,0 +1,5 @@
+<% #postfix("*.htm") %>
+<% #include("pr2index.asp") %>
+<% #include("pr2content.asp") %>
+
+

@@ -1,0 +1,67 @@
+package KSBase60;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'Kingstar Fundamental Class Library'}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
+{$DEFINE DEBUG}
+
+requires
+  vcl,
+  vclx,
+  vcldb;
+
+contains
+  ColorUtils in 'ColorUtils.pas',
+  ComWriUtils in 'ComWriUtils.pas',
+  CompUtils in 'CompUtils.pas',
+  DrawUtils in 'DrawUtils.pas',
+  extutils in 'ExtUtils.pas',
+  FormUtils in 'FormUtils.pas',
+  Listeners in 'Listeners.pas',
+  LogFile in 'LogFile.pas',
+  LibMessages in 'LibMessages.pas',
+  PrintUtils in 'PrintUtils.pas',
+  NetUtils in 'NetUtils.pas',
+  Safecode in 'SafeCode.pas',
+  TextUtils in 'TextUtils.pas',
+  ThrddCF in 'ThrddCF.pas',
+  IPCUtils in 'IPCUtils.pas',
+  IntfUtils in 'IntfUtils.pas',
+  WinUtils in 'WinUtils.pas',
+  winobjs in 'WinObjs.pas',
+  DebugMemory in 'DebugMemory.pas',
+  TypUtils in 'TypUtils.pas',
+  TxtDB in 'TxtDB.pas',
+  TxtDBEx in 'TxtDBEx.pas',
+  KSStrUtils in 'KSStrUtils.pas',
+  ConvertUtils in 'ConvertUtils.pas',
+  ObjDir in 'ObjDir.pas',
+  ProgressShowing in 'ProgressShowing.pas' {fmProgressShowing},
+  DataTypes in 'DataTypes.pas',
+  FilterStreams in 'FilterStreams.pas',
+  RegSvrUtils in 'RegSvrUtils.pas',
+  KSKeyboard in 'KSKeyboard.pas';
+
+end.

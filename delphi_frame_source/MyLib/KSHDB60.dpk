@@ -1,0 +1,44 @@
+package KSHDB60;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'Kingstar HDB Package'}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
+{$DEFINE DEBUG}
+
+requires
+  vcl50,
+  vcldb50,
+  KSBase50;
+
+contains
+  DBAIntf in '..\StdIntf\DBAIntf.pas',
+  BDACore in '..\StdIntf\BDACore.pas',
+  BDAImp in '..\StdIntf\BDAImp.pas',
+  BDAImpEx in '..\StdIntf\BDAImpEx.pas',
+  DataDict in '..\StdIntf\DataDict.pas',
+  BasicDataAccess_TLB in '..\StdIntf\BasicDataAccess_TLB.pas',
+  DBAHelper in '..\StdIntf\DBAHelper.pas';
+
+end.

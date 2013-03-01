@@ -1,0 +1,48 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = KSBase50.bpl KSBaseX50.bpl DKSBaseX50.bpl KSUser50.bpl DKSUser50.bpl \
+  KSStyle50.bpl KSWorkView50.bpl KSHDB50.bpl KSCom50.bpl KSReport50.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+KSBase50.bpl: KSBase50.dpk
+  $(DCC)
+
+KSUser50.bpl: KSUser50.dpk
+  $(DCC)
+
+KSStyle50.bpl: KSStyle50.dpk
+  $(DCC)
+
+KSWorkView50.bpl: KSWorkView50.dpk
+  $(DCC)
+
+DKSUser50.bpl: DKSUser50.dpk
+  $(DCC)
+
+KSBaseX50.bpl: KSBaseX50.dpk
+  $(DCC)
+
+DKSBaseX50.bpl: DKSBaseX50.dpk
+  $(DCC)
+
+KSHDB50.bpl: ..\StdIntf\KSHDB50.dpk
+  $(DCC)
+
+KSCom50.bpl: ..\Import\KsComLib\KSCom50.dpk
+  $(DCC)
+
+KSReport50.bpl: ..\Report\KSReport50.dpk
+  $(DCC)
+
+

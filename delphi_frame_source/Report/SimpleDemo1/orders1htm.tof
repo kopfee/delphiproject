@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Orders Group Report</title>
+<%
+  DataEntry("Orders","Orders");
+  FileName("Orders1.htm");
+%>
+</head>
+<body>
+<h1>Orders Group Report</h1>
+<table>
+<tr><td>CustNo</td><td>Company</td><td>OrderNo</td><td>Payment</td><td>ItemNo</td><td>PartNo</td></tr>
+<%ForLoop("Orders")%><tr>
+<td><%FieldValue("CustNo","8")%></td>
+<td><%FieldValue("Company","20","Center")%></td>
+<td><%FieldValue("OrderNo","10","Left")%></td>
+<td><%FieldValue("PaymentMethod","10","Left")%></td>
+<td><%FieldValue("ItemNo","8","Left")%></td>
+<td><%FieldValue("PartNo","10","Left")%></td>
+</tr><%EndLoop()%>
+</table>
+</body>
+</html>

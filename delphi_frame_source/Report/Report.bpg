@@ -1,0 +1,33 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = KSReport.bpl RPCBDLL.dll TestDesign.exe ReportBuilder.exe \
+  TestDesignDLL.exe
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+KSReport.bpl: KSReport.dpk
+  $(DCC)
+
+RPCBDLL.dll: RPCBDLL.dpr
+  $(DCC)
+
+TestDesign.exe: Test2\TestDesign.dpr
+  $(DCC)
+
+ReportBuilder.exe: Tools\ReportBuilder.dpr
+  $(DCC)
+
+TestDesignDLL.exe: DLL\TestDesignDLL.dpr
+  $(DCC)
+
+

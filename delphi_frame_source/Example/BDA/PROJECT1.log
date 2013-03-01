@@ -1,0 +1,49 @@
+16:16:40 TMSSQLAcsEx[0122D248] create.
+16:16:42 trigerEvent0
+16:16:42 THDataset[01229594] create.
+16:16:42 add listener
+16:16:43 trigerEvent2
+16:16:43 trigerEvent3
+16:16:43 trigerEvent4
+16:16:43 after dbresults :1
+16:16:43 nextResponse:1
+16:16:43 THField[0122E70C] create.
+16:16:43 THField[0122E7EC] create.
+16:16:43 THField[0122E8A4] create.
+16:16:43 THField[0122E948] create.
+16:16:43 THField[0122EA00] create.
+16:16:43 THField[0122EAEC] create.
+16:16:43 THField[0122EB90] create.
+16:16:43 THField[0122ECA4] create.
+16:16:43 THField[0122ED5C] create.
+16:16:43 THBrowseRender[0122FE28] create.
+16:16:43 THDataset[01229594] Datarows : 10
+16:16:43 trigerEvent4
+16:16:43 skip rows:11
+16:16:43 after dbresults :2
+16:16:43 nextResponse:2
+16:16:43 trigerEvent4
+16:16:43 trigerEvent5
+16:16:43 nextResponse:0
+16:16:44 StdDataset.free
+16:16:44 Render := nil
+16:16:44 THBrowseRender[0122FE28] Destroy.
+16:16:44 Dataset := nil
+16:16:44 DataAccess.free
+16:16:44 begin free TMSSQLAcs
+16:16:44 trigerEvent6
+16:16:44 remove listener
+16:16:44 begin free THDataset
+16:16:44 THField[0122ED5C] Destroy.
+16:16:44 THField[0122ECA4] Destroy.
+16:16:44 THField[0122EB90] Destroy.
+16:16:44 THField[0122EAEC] Destroy.
+16:16:44 THField[0122EA00] Destroy.
+16:16:44 THField[0122E948] Destroy.
+16:16:44 THField[0122E8A4] Destroy.
+16:16:44 THField[0122E7EC] Destroy.
+16:16:44 THField[0122E70C] Destroy.
+16:16:44 THDataset[01229594] Destroy.
+16:16:44 trigerEvent1
+16:16:44 count=0
+16:16:44 TMSSQLAcsEx[0122D248] Destroy.

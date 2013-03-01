@@ -1,0 +1,703 @@
+NOTE: IN THE 32 BIT VERSION OF IMAGELIB, ALL INTEGERS ARE SHORTINTS
+
+ImageLib 31/95 (c) 1995 by:
+
+SkyLine Tools
+1-800-404-3832
+
+
+Technical support  for C, C++, Kevin Adams:  (CIS) 74742,1444
+
+ImageLib is an inexpensive way to add JPEG, GIF, BMP, PCX, PNG and TIFF
+graphic formats to your applications. Yes, there are image libraries
+supporting many more formats than imagelib, but those libraries are more
+expensive and carry more overhead to your applications.  The ImageLib DLL
+supports the reading and writing of JPEG, GIF, BMP, PCX, PNG, and TIFF images
+from memory or from a file. The ImageLib DLL supports the use of an optional
+callback function in the calling application.  The callback can provide
+progress displaying of read and write functions and the ability to cancel
+read functions in progress. The DLL also provides functions to retrieve 
+information about an image in memory or in a file without reading the whole
+image.  The functions return type of image, compression, width, height,
+bits per pixel, number of planes, and number of colors.  The memory functions
+of the Image Lite DLL are specifically designed to support database BLOB
+operations.  All calls return error codes and the DLL will optional display
+error messages.  The error codes refer to error text strings located in
+a string table resource inside the DLL.  The DLL supports Device Dependent
+Bitmaps(DDB) or Device Independent Bitmaps(DIB) in the reading and writing
+of images. The Image Lite DLL contains a sophisticated color quantization
+engine that can be used when reading and writing images.  When reading an image,
+settings can be used so that the bitmap that is returned is of the resolution
+you specify and is independent of the input image.  If the developer wants all
+images to be passed back as 256 color 8 bit dithered images then all bitmaps 
+passed back will be 8 bit whether they where originally 24 bit or 4 bit.  The
+color quantizer is designed to produce the best image possible at the desired
+resolution.  When writing an image the developer may specify the resolution of
+the image to be written and the image will be that be written (if that resolution
+is valid for the image type) at that resolution.  The ImageLib DLL also is Twain 
+complient and can be used with Twain complient devices such as scanners.  The DLL
+includes a SelectSource call to select a Twain Source and a AquireImage call to
+invoke the vender's Twain Source Manager and bring back an image.  Our Twain will
+work with 16 bit and 32 bit Twain Sources.
+
+ImageLib includes examples for Borland C++ 4.0x and for MSVC++ version 1.5x.  The
+Borland examples are OWL examples and are located in the borland subdirectory. 
+The MSVC demo is an MFC example is is located in the msvc subdirectory.
+
+Image Formats Supported:
+
+JPEG 
+GIF
+PCX 
+BMP
+PNG
+TIF
+
+Color Quantizer
+
+The color quantizer is used to reduce an image to a lower bit depth with out
+loosing as much quality as possible.  The color quantizer will analysis the input
+image and produce an optimized color palette using the maximum number of colors
+allowed for the output bit depth.  The color quantizer will then reduce the input
+image by mapping the input image pixels to the output image pixels through the 
+optimize color palette.  This can be done with dithering or without dithering.  
+In most cases dithering produces better results.  Input images that have a bit
+depth of 8 or higher can be reduced.  Input images of 1 bit per pixel will not be 
+reduced.  The reduction options are:
+
+   24 bit 16.7 million color to 8 bit 256 color
+   24 bit 16.7 million color to 4 bit 16 color
+   24 bit 16.7 million color to 4 bit 16 VGA colors (for VGA systems)
+   24 bit 16.7 million color to 1 bit 2 color
+   8 bit 256 color to 4 bit 16 color
+   8 bit 256 color to 4 bit 16 VGA colors
+   8 bit 256 color to 1 bit 2 color
+   4 bit 16 color to 1 bit 2 color
+   
+
+Note that the 16 color output image is uses an optimized color palette based on
+the input image and not the windows system palette.  This means that with VGA 
+modes the 16 color output may not look good because the optimize 16 color 
+palette does not match the windows system palette.  The VGA 16 colors option 
+should be used for VGA systems.
+
+All read calls also support the passing in of a handle to a windows logical
+color palette.  If a windows logical color palette handle is passed in the call
+then the DLL will use the passed in color palette and color reduce an image to
+match the input color palette.  When passing in a color palette, make sure that
+the request image output resolution matches the number of colors in the color 
+palette.
+
+
+DLL Calls
+
+There are four different calls that essential do the same thing but either
+take their input differently or provide their output differently.  The first
+set will be described individually, but afterwards all four in a set will be
+listed followed by one description.
+
+Before any calls are used the DLL must be properly initialized with the passcode.
+The DLL call is:
+
+InitDll(HWND hwnd, const char *passcode);
+
+hwnd is a application window handle and the passcode parameter is the passcode
+string "yk127e".  This must be called by an application once in order for the 
+DLL to work. 
+
+______________________________________________________________________________
+
+int readjpgfile(const char *filename, int resolution, int scale, int dither,
+                unsigned int * hddb, unsigned int * hpal,
+                short (*pf) (int), short errormode);
+
+This function is passed a filename of a JPG file; integer for resolution, scale,
+option, and returns unsigned integer pointers (Handles) to a
+HBITMAP and a HPALETTE to the resulting bitmap and palette.  It returns
+one on success or a negative integer indicating an error code on failure.
+The errormode parameter indicates whether or not the DLL will display error
+messages internally.  If the input JPG file contains a Grayscale image then
+the resolution and option input parameters will be automatically over-ridden.
+
+resolution		1:  2 bit (2 colors)
+                        0:  4 bit VGA palette(16 colors)
+                        4:  4 bit    (16 colors)
+			8:  8 bit   (256 colors)
+			24: 24 bit  (16 Million colors)
+
+scale			1:  1/1 normal size
+			2:  1/2 size	
+			4:  1/4 size
+			8:  1/8 size
+
+dither                  0:  No dithering
+                        1:  Dither
+
+hddb			Pointer to bitmap handle
+
+hpal			Pointer to palette handle
+
+pf			Pointer to a callback function defined as:
+ 				short pf (int);
+
+errormode               0 : Do not show error messages in DLL
+                        1 : Display error messages in DLL
+				
+Hpal Notes:      The DLL checks the input palette handle.  If the value is NOT
+                 0 then the DLL will attempt to create a color palette from the
+                 handle.  It will then try to use that color palette for the 
+                 output image if color reduction is selected.  Otherwise, 
+                 the DLL will create an optimum color palette is color reduction
+                 is performed.
+
+Callback Notes:  If no callback function is defined then pass NULL for pf.
+                 If a callback function is used then the function will be called
+                 periodically with an integer input value containing a value
+                 between 0 and 100 denoting how much of the current operation has
+                 been completed.  The application's callback function must return
+                 a short value indicating status.  A return of 1 means to continue
+                 with the function and a return of 0 means to cancel the
+                 function.  If the function gets back a 0 it will cancel the
+                 reading of the image and return a valid bitmap and palette handle
+                 containing as much of the image that was complete before being
+                 canceled.  The read function will still return a one value
+                 even if the function was canceled via the callback.
+
+Errormode Notes: All of the DLL calls will return a 1 for success or a negative
+                 number that is an error code.   All of the error codes have
+                 text string equivalents located in a string table resource
+                 inside of the DLL.  The first example imgview illustrates how
+                 to access the strings.  If you want to control what error
+		 messages are displayed to the user the use 0 so that the DLL
+                 will not automatically display error messages.
+_____________________________________________________________________________
+
+JPEG FORMAT
+_____________________________________________________________________________
+
+int rdjpgfiledib(const char *filename, int resolution, int scale, int dither,
+                 unsigned int *hdib, unsigned int hpal, short (*pf) (int),
+                 short errormode);
+
+This function is the same as the "readjpgfile" function except that it return
+a pointer to a DIB (hdib) HANDLE rather that a pointer to a DDB and palette HANDLE.
+
+hdib             Pointer to a DIB handle.
+
+hpal             Value of a logical palette handle. Nothing is returned with
+                 this parameter.  It is input only. It contain 0 or an optional
+                 handle to a color palette for color reduction.
+______________________________________________________________________________
+
+
+int readjpgstream(void * inbuffer, long size, int resolution, int scale,
+                  int dither, unsigned int * hddb, unsigned int * hpal,
+                  short (*pf) (int), short errormode);
+
+
+This function is the equivalent to the "readjpgfile" function above except that
+input is from a pointer to a global memory location that contains a JPEG image
+and the size input parameter contains the size of the JPEG image in bytes.  
+
+inbuffer            A pointer to a memory location that contain the input image.
+                    The memory location should have preferably been globally
+                    allocated.
+
+size                This is a long value containing the number of bytes in
+                    the buffer.
+
+_____________________________________________________________________________
+
+int rdjpgstreamdib(void * inbuffer, long size, int resolution, int scale,
+                  int dither, unsigned int * hdib, unsigned int hpal,
+                  short (*pf) (int), short errormode);
+
+This is the same as the "readjpgstream" except it returns a DIB
+HANDLE rather than a DDB and Palette HANDLE.
+_____________________________________________________________________________
+
+int writejpegfile(const char * filename,  int quality, int smooth, int resolution, 
+                  unsigned int hddb, unsigned int hpal, short (*pf)(int),
+                  short errormode);
+
+int writejpegstream(void * inbuffer, long * size,  int quality, int smooth,
+                    int resolution, unsigned int hddb, unsigned int hpal,
+                    short (*pf)(int), short errormode);
+
+int wrjpegfiledib(const char * filename,  int quality, int smooth, int resolution, 
+                  unsigned int hdib, short (*pf)(int), short errormode);
+
+int wrjpegstreamdib(void * inbuffer, long * size,  int quality, int smooth,
+                    int resolution, unsigned int hdib, short (*pf)(int),
+                    short errormode);
+
+These functions are passed a filename or a pointer to a buffer or size to write a
+JPEG image to.  The inputs are either HANDLES to a DDB and logical palette or 
+a HANDLE to a DIB.  The quality and smooth parameters describe the amount of 
+compression and any smoothing desired.  Output size of the file or memory stream 
+is based on the size input and the value of the quality parameter.  
+
+filename                A pointer to a string containing a name and path of 
+                        output file.
+
+inbuffer                A pointer to a memory location where the output image
+                        will be written.
+
+size                    A pointer to a long value that will indicate on return
+                        how much of the memory location was actually used to
+                        store the output image.
+ 
+quality 		0..100   
+			0 is poor and 100 excellent.  We  normally use
+                        75 to have a reasonable quality with 1/10 savings
+                        in size from 24-bit data.
+
+smooth			0..100    
+			0 is no smoothing  and 100  is full smoothing. 
+
+resolution              24 write a 24 bit JPEG image
+                        1  write a 8 bit JPEG grayscale image
+
+hddb			Device Dependent Bitmap handle (not a pointer!)
+
+hpal		 	Logical Palette handle (not a pointer!)
+
+hdib                    Device Independent Bitmap handle(not a pointer!)
+
+pf		 	Pointer to a callback function defined as:
+ 			    short pf (int);
+				
+Callback Notes:  For write functions the callback return value is not used.
+                 It is not possible to cancel a write function.
+______________________________________________________________________________
+
+GIF FORMAT
+_____________________________________________________________________________
+
+
+int readgiffile(const char *filename, int resolution, int dither,
+                unsigned int * hddb, unsigned int * hpal, short (*pf)(int),
+                short errormode);
+
+int readgifstream(void * inbuffer, long size, int resolution, int dither,
+                  unsigned int * hddb, unsigned int * hpal,
+                  short(*pf)(int), short errormode);
+
+int rdgiffiledib(const char *filename, int resolution, int dither, 
+                 unsigned int * hdib, unsigned int hpal,
+                 short (*pf)(int), short errormode);
+
+int rdgifstreamdib(void * inbuffer, long size, int resolution, int dither,
+                   unsigned int * hdib, unsigned int hpal,
+                   short(*pf)(int), short errormode);
+
+These functions take as input a file or memory stream pointing to a GIF image.
+It returns pointers to a bitmap Handle and a palette Handle or a DIB Handle.
+A return value of one is success,  a negative number is failure and refers
+to an error code.  The bitmap returned will be based on the resolution and
+dither parameters.  The output will have a bit depth equal to the resolution
+no matter what the input resolution is.  The Dither parameter indicates to
+use dithering if the color quantitization engine is going to reduce the bit
+depth of the input image. Interlaced and non-interlaced GIF images are 
+supported.
+______________________________________________________________________________
+
+int writegiffile(const char * filename,  int resolution,
+                 unsigned int hddb, unsigned int hpal, short (*pf)(int),
+                 short errormode);
+
+int writegifstream(void * inbuffer, long * size,  int resolution, 
+                   unsigned int hddb, unsigned int hpal,
+                   short (*pf)(int), short errormode);
+
+int wrjgiffiledib(const char * filename,  int resolution, 
+                  unsigned int hdib, short (*pf)(int), short errormode);
+
+int wrgifstreamdib(void * inbuffer, long * size,  int resolution,
+                   unsigned int hdib, short (*pf)(int), short errormode);
+
+These functions are passed a filename or a pointer to a buffer or size to write a
+GIF image to.  The inputs are either HANDLES to a DDB and logical palette or 
+a HANDLE to a DIB.  The resolution parameter describes the bit depth of the output
+image.  For GIF images a 24 bit output bit depth is invalid. Output size of the file
+or memory stream is based on the size input and the value of the resolution
+parameter.  The input bitmap's bit depth will be raised or lowered as necessary
+according to the resolution parameter. Output image is not interlaced. The DLL 
+supports the GIF 87a standard.
+
+______________________________________________________________________________
+
+PCX FORMAT
+_____________________________________________________________________________
+
+int readpcxfile(const char *filename, int resolution, int dither,
+                unsigned int * hddb, unsigned int * hpal, short (*pf)(int),
+                short errormode);
+
+int readpcxstream(void * inbuffer, long size, int resolution, int dither,
+                  unsigned int * hddb, unsigned int * hpal,
+                  short(*pf)(int), short errormode);
+
+int rdpcxfiledib(const char *filename, int resolution, int dither, 
+                 unsigned int * hdib, unsigned int hpal,
+                 short (*pf)(int), short errormode);
+
+int rdpcxstreamdib(void * inbuffer, long size, int resolution, int dither,
+                   unsigned int * hdib, unsigned int hpal,
+                   short(*pf)(int), short errormode);
+
+These functions take as input a file or memory stream pointing to a PCX image.
+It returns pointers to a bitmap Handle and a palette Handle or a DIB Handle.
+A return value of one is success,  a negative number is failure and refers
+to an error code.  The bitmap returned will be based on the resolution and
+dither parameters.  The output will have a bit depth equal to the resolution
+no matter what the input resolution is.  The Dither parameter indicates to
+use dithering if the color quantitization engine is going to reduce the bit
+depth of the input image. 
+
+______________________________________________________________________________
+
+int writepcxfile(const char * filename,  int resolution, 
+                 unsigned int hddb, unsigned int hpal, short (*pf)(int),
+                 short errormode);
+
+int writepcxstream(void * inbuffer, long * size,  int resolution, 
+                   unsigned int hddb, unsigned int hpal,
+                   short (*pf)(int), short errormode);
+
+int wrpcxfiledib(const char * filename,  int resolution, 
+                  unsigned int hdib, short (*pf)(int), short errormode);
+
+int wrpcxstreamdib(void * inbuffer, long * size,  int resolution,
+                   unsigned int hdib, short (*pf)(int),
+                   short errormode);
+
+These functions are passed a filename or a pointer to a buffer or size to write a
+PCX image to.  The inputs are either HANDLES to a DDB and logical palette or 
+a HANDLE to a DIB.  The resolution parameter describes the bit depth of the output
+image.  Output size of the file or memory stream is based on the size input
+and the value of the resolution parameter.  The input bitmap's bit depth
+will be raised or lowered as necessary according to the resolution parameter. 
+
+______________________________________________________________________________
+
+BMP FORMAT
+_____________________________________________________________________________
+
+int readbmpfile(const char *filename, int resolution, int dither,
+                unsigned int * hddb, unsigned int * hpal, short (*pf)(int),
+                short errormode);
+
+int readbmpstream(void * inbuffer, long size, int resolution, int dither,
+                  unsigned int * hddb, unsigned int * hpal,
+                  short(*pf)(int), short errormode);
+
+int rdbmpfiledib(const char *filename, int resolution, int dither, 
+                 unsigned int * hdib, unsigned int hpal,
+                 short (*pf)(int), short errormode);
+
+int rdbmpstreamdib(void * inbuffer, long size, int resolution, int dither,
+                   unsigned int * hdib, unsigned int hpal,
+                   short(*pf)(int), short errormode);
+
+These functions take as input a file or memory stream pointing to a BMP image.
+It returns pointers to a bitmap Handle and a palette Handle or a DIB Handle.
+A return value of one is success,  a negative number is failure and refers
+to an error code.  The bitmap returned will be based on the resolution and
+dither parameters.  The output will have a bit depth equal to the resolution
+no matter what the input resolution is.  The Dither parameter indicates to
+use dithering if the color quantitization engine is going to reduce the bit
+depth of the input image.  The input BMP image must contain the BITMAPFILEHEADER
+part of a BMP at the front before the BITMAPINFOHEADER.  The read BMP functions 
+do support RLE type BMP files.
+
+______________________________________________________________________________
+
+int writebmpfile(const char * filename,  int resolution, 
+                 unsigned int hddb, unsigned int hpal, short (*pf)(int),
+                 short errormode);
+
+int writebmpstream(void * inbuffer, long * size,  int resolution, 
+                   int password, unsigned int hddb, unsigned int hpal,
+                   short (*pf)(int), short errormode);
+
+int wrbmpfiledib(const char * filename,  int resolution,
+                  unsigned int hdib, short (*pf)(int), short errormode);
+
+int wrbmpstreamdib(void * inbuffer, long * size,  int resolution,
+                   unsigned int hdib, short (*pf)(int),
+                   short errormode);
+
+These functions are passed a filename or a pointer to a buffer or size to write a
+BMP image to.  The inputs are either HANDLES to a DDB and logical palette or 
+a HANDLE to a DIB.  The resolution parameter describes the bit depth of the output
+image.  Output size of the file or memory stream is based on the size input
+and the value of the resolution parameter.  The input bitmap's bit depth
+will be raised or lowered as necessary according to the resolution parameter. 
+
+______________________________________________________________________________
+
+PNG FORMAT
+_____________________________________________________________________________
+
+
+int readpngfile(const char *filename, int resolution, int dither,
+                unsigned int * hddb, unsigned int * hpal, short (*pf)(int),
+                short errormode);
+
+int readpngstream(void * inbuffer, long size, int resolution, int dither,
+                  unsigned int * hddb, unsigned int * hpal,
+                  short(*pf)(int), short errormode);
+
+int rdpngfiledib(const char *filename, int resolution, int dither, 
+                 unsigned int * hdib, unsigned int hpal,
+                 short (*pf)(int), short errormode);
+
+int rdpngstreamdib(void * inbuffer, long size, int resolution, int dither,
+                   unsigned int * hdib, unsigned int hpal,
+                   short(*pf)(int), short errormode);
+
+These functions take as input a file or memory stream pointing to a PNG image.
+It returns pointers to a bitmap Handle and a palette Handle or a DIB Handle.
+A return value of one is success,  a negative number is failure and refers
+to an error code.  The bitmap returned will be based on the resolution and
+dither parameters.  The output will have a bit depth equal to the resolution
+no matter what the input resolution is.  The Dither parameter indicates to
+use dithering if the color quantitization engine is going to reduce the bit
+depth of the input image. 
+
+______________________________________________________________________________
+
+int writepngfile(const char * filename,  int resolution, int interlaced,
+                 unsigned int hddb, unsigned int hpal,
+                 short (*pf)(int), short errormode);
+
+int writepngstream(void * inbuffer, long * size,  int resolution, int interlaced, 
+                   unsigned int hddb, unsigned int hpal,
+                   short (*pf)(int), short errormode);
+
+int wrpngfiledib(const char * filename,  int resolution, int interlaced, 
+                 unsigned int hdib, short (*pf)(int),
+                 short errormode);
+
+int wrpngstreamdib(void * inbuffer, long * size,  int resolution, int interlaced,
+                   unsigned int hdib, short (*pf)(int),
+                   short errormode);
+
+interlaced :     1 - write an interlaced type PNG image
+                 0 - write a non-interlaced type PNG image
+
+These functions are passed a filename or a pointer to a buffer or size to write a
+PNG image to.  The inputs are either HANDLES to a DDB and logical palette or 
+a HANDLE to a DIB.  The resolution parameter describes the bit depth of the output
+image.  Output size of the file or memory stream is based on the size input
+and the value of the resolution parameter.  The input bitmap's bit depth
+will be raised or lowered as necessary according to the resolution parameter. The
+interlaced parameter indicated to write an interlaced PNG file when it is one and
+a non-interlaced parameter when it is 0.
+
+______________________________________________________________________________
+
+TIFF FORMAT
+_____________________________________________________________________________
+
+
+int readtiffile(const char *filename, int resolution, int dither,
+                unsigned int * hddb, unsigned int * hpal, short (*pf)(int),
+                short errormode);
+
+int readtifstream(void * inbuffer, long size, int resolution, int dither,
+                  unsigned int * hddb, unsigned int * hpal,
+                  short(*pf)(int), short errormode);
+
+int rdtiffiledib(const char *filename, int resolution, int dither, 
+                 unsigned int * hdib, unsigned int hpal,
+                 short (*pf)(int), short errormode);
+
+int rdtifstreamdib(void * inbuffer, long size, int resolution, int dither,
+                   unsigned int * hdib, unsigned int hpal,
+                   short(*pf)(int), short errormode);
+
+These functions take as input a file or memory stream pointing to a TIF image.
+It returns pointers to a bitmap Handle and a palette Handle or a DIB Handle.
+A return value of one is success,  a negative number is failure and refers
+to an error code.  The bitmap returned will be based on the resolution and
+dither parameters.  The output will have a bit depth equal to the resolution
+no matter what the input resolution is.  The Dither parameter indicates to
+use dithering if the color quantitization engine is going to reduce the bit
+depth of the input image. The DLL meets the TIF baseline specifications and 
+will support TIF images from 1 to 24 bits and will read TIFF images of the 
+following types:
+
+    No Compression
+    Packbits
+    LZW 
+    CCITT Group 3 (1 bit only)
+
+______________________________________________________________________________
+
+int writetiffile(const char * filename,  int compression, int stripsize,
+                 int resolution, unsigned int hddb, unsigned int hpal,
+                 short (*pf)(int), short errormode);
+
+int writetifstream(void * inbuffer, long * size,  int compression, 
+                   int stripsize, int resolution, unsigned int hddb,
+                   unsigned int hpal, short (*pf)(int), short errormode);
+
+int wrtiffiledib(const char * filename,  int compression, int stripsize, 
+                 int resolution, unsigned int hdib, short (*pf)(int),
+                 short errormode);
+
+int wrtifstreamdib(void * inbuffer, long * size,  int compression,
+                   int stripsize, int resolution, unsigned int hdib,
+                   short (*pf)(int), short errormode);
+
+compression :      1 - No compression
+                   2 - CCITT compression (1 bit; not supported at this time)
+                   5 - LZW compression
+                   32773 - PackBits compression
+
+stripsize :        An integer value indicating the number of different strips
+                   to separate the image into.
+
+These functions are passed a filename or a pointer to a buffer or size to write a
+PNG image to.  The inputs are either HANDLES to a DDB and logical palette or 
+a HANDLE to a DIB.  The resolution parameter describes the bit depth of the output
+image.  Output size of the file or memory stream is based on the size input
+and the value of the resolution parameter.  The input bitmap's bit depth
+will be raised or lowered as necessary according to the resolution parameter. The
+compression parameter indicated the type of compression to use. 
+______________________________________________________________________________
+
+int fileinfo(const char * filename, char * filetype, int * width, int * height,
+             int * bitspixel, int * planes, int * numcolors, char * compression,
+             short errormode);
+
+This function takes the filename of an image and returns information about the
+image.  This function works with BMP, JPG, GIF, PNG, and PCX images.  It is
+not dependent on file extension and will identify if a file is one of the above
+image types no matter what the extension is.  If the function cannot
+correctly identify a file it will return a negative number indicating and
+error code, otherwise a 1.  All of the other parameters are pointer to
+variables that will be filled by the function.
+
+filetype            This character pointer will contain the type of image
+                    contained in the file.
+		
+width               The width of the image in pixels
+
+height		    The height of the image in pixels
+
+bitspixel	    The pixel depth, or bits per pixel, of the image
+
+planes		    The number of bit planes in the image
+
+numcolors	        The number of palette entries used by the image.
+                    Will be 0 for RGB or true color images.
+
+compression         Type of compression used for the image or other useful
+                    information.  For JPEG and PNG images this variable will
+                    indicate a RGB or Grayscale colorspace type for the image.
+
+errormode           0 : do not show errors
+                    1 : show errors
+___________________________________________________________________________
+
+int streaminfo(void * inbuffer, long size, char * filetype, int * width,
+               int * height, int * bitspixel, int * planes, int * numcolors,
+               char * compression, short errorcode);
+
+This function is similar to the fileinfo function except that is identifies
+the type of image that is in the input buffer rather than a file.  It is
+recommended that the entire image be in memory when trying to use this function.
+While the function may work with a incomplete function because in many cases
+it just scans the image header it is not certified to work that way.
+___________________________________________________________________________
+
+TWAIN
+_____________________________________________________________________________
+
+int twainavailable(HWND hwind, short errormode);
+
+This call will check the windows environment to see if Twain is currently 
+available.  It will check for the "TWAIN.DLL" DLL and it will check to make
+sure there is at lease one Source Manager installed on the system.  A one 
+indicates that Twain is available and a negative number indicates an errorcode.
+If a negative number returns check to ensure that the Twain software was 
+correctly installed by the Twain complient device.
+
+hwind:      A handle to a application window
+
+errormode:  0:  The DLL will not display error messages.
+            1:  Dll will display error messages.
+______________________________________________________________________________
+
+int selectsource(HWND hwind, short errormode);
+
+This call will bring up the Twain source selection window which allows the user
+to specify the Twain Source Manager they want to use.  This is for systems that
+have more that one Twain Source loaded.  It will return a 1 if no errors or a
+negative number for an error.  Selecting "Cancel" in the window is not an error.
+_______________________________________________________________________________
+
+ int aquireimage(HWND hwind, int resolution, int dither, int hideUI,
+		     unsigned int * hddb, unsigned int * hpal,
+		     short (*pf)(int), short errormode);
+
+This call will open up the currently selected Twain Source (If no Source has
+been selected the default will be used) and start up the Source Manager for the
+Twain device to allow the user to control that device.  Once the user has finished
+with the device a handle to the BITMAP and PALETTE where the image will be stored.
+The hideUI option is not currently used and the other parameters are the same as 
+if reading an image.
+________________________________________________________________________________
+
+The DLL can also be used with other languages besides C.  There is a Delphi
+vcl components available the same DLL.
+
+Technical Support and questions:
+
+Kevin Adams: compuserve 74742,1444  or   
+Internet : 74742,1444@compuserve.com
+
+
+Address:
+
+SkyLine Tools
+Attn: Jan Dekkers
+11956 Riverside Drive 206
+North Hollywood CA 91607
+Phone 818 766-3900
+Fax: 818 766-9027
+________________________________________________________________________________
+
+License Agreement
+
+
+Rights and Limitations
+The software which accompanies this license ("ImageLib") is the property
+of SkyLine Tools or its licensers and is protected by copyright law.
+By using ImageLib you agree to the terms of this agreement. You may install one
+copy of the ImageLib product on a single computer. One copy of ImageLib may be
+only used by a single developer at a time.  When ImageLib is being used by
+an executable application then there are no licensing fees or royalties
+for distribution of the executable and the DLL.  Should any part of ImageLib
+be used in a non-compiled application, such as:  a value added VCL, VBX, OCX,
+royalties apply.      
+
+Limited Warranty
+SkyLine Tools warrants that ImageLib will perform substantially in accordance
+with the accompanying documentation for a period of (90) days from the date
+of receipt.
+
+Liabilities 
+SkyLine Tools and its licensers entire liability and your exclusive remedy
+shall be, at SkyLine Tools option, either return of the price paid,
+or repair or replacement of the ImageLib product.
+  
+Gif and Tiff uses LZW compression which is patented by Unisys. On
+CompuServe GO PICS to obtain information about the Unisys patents.
+By using ImageLib's GIF Read and Write features you acknowledge that
+SkyLine has notified you about the LZW patent and hold SkyLine harmless
+from any legal actions.
+ 

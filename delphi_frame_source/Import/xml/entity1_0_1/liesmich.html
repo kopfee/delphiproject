@@ -1,0 +1,1085 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+
+<HTML>
+
+<HEAD>
+
+<TITLE>Entity Translator offline Dokumentation</TITLE>
+
+<STYLE TYPE="text/css">
+
+<!--
+
+body {
+
+font-size: 10pt;
+
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+
+margin-left: 0px; 
+
+margin-top: 0px;
+
+color: #000000;;
+
+}
+
+
+
+
+
+H1, H2, H3, H4, H5, H6 { 
+
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+
+font-weight: bold; 
+
+color: #000000; 
+
+}
+
+
+
+H1 { font-size: 18pt; }
+
+H2 { font-size: 14pt; 
+
+     margin-top: 0px; 
+
+     margin-bottom: 0px;}
+
+H3 { font-size: 12pt; }
+
+H4 { font-size: 10pt; }
+
+H5 { font-size: 9pt; }
+
+H6 { font-size: 8pt; }
+
+
+
+P {
+
+font-size: 10pt; 
+
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+
+line-height: 14pt;
+
+margin-left: 3pt;
+
+}
+
+
+
+.plain {
+
+font-size: 10pt; 
+
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+
+font-weight: bold;
+
+}
+
+
+
+.copyright {
+
+font-size: 9pt; 
+
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+
+text-align: center;
+
+color: #c0c0c0;
+
+background: #000000;
+
+}
+
+
+
+	
+
+.globalmenu {
+
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+
+font-size: 9pt;
+
+line-height: 16pt;
+
+text-decoration: none;
+
+color: #FFFFFF;
+
+}
+
+
+
+	
+
+.welcome {
+
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+
+font-size: 10pt;
+
+font-weight: bold;
+
+line-height: 12pt;
+
+margin: 4pt;
+
+text-decoration: none;
+
+color: #FFcc33;
+
+background: #000000;
+
+}
+
+
+
+	
+
+.sidemenu {
+
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+
+font-size: 10pt;
+
+line-height: 11pt;
+
+text-decoration: none;
+
+color: #FFFFFF;		
+
+font-weight: normal;
+
+margin-left: 10pt;
+
+margin-top: 0pt;
+
+margin-bottom: 0pt;
+
+}
+
+
+
+.lefttitle {
+
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+
+font-size: 13pt;
+
+margin-left: 5pt;
+
+color: #FFcc33;
+
+font-weight: bold;
+
+}
+
+
+
+.headline {
+
+font-size: 13pt;
+
+margin: 2pt;
+
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+
+color: #000000;
+
+background: #FFCC33;
+
+font-weight: bold;
+
+font-style: italic;
+
+}
+
+
+
+.headline3 {
+
+font-size: 13pt;
+
+margin: 2pt;
+
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+
+color: #000000;
+
+background: #FFCC33;
+
+font-weight: bold;
+
+font-style: normal;
+
+}
+
+
+
+.headline4 {
+
+font-size: 10pt;
+
+margin: 2pt;
+
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+
+color: #000000;
+
+background: #FFCC33;
+
+font-weight: bold;
+
+font-style: normal;
+
+}
+
+
+
+.byline {
+
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+
+font-size: 9pt;
+
+color: #000000;
+
+font-weight: bold; 
+
+margin-left: 10pt;
+
+}
+
+
+
+.linkitem {
+
+font-size: 10pt; 
+
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+
+color: #000000;
+
+margin-left: 10pt;
+
+line-height: 14pt;
+
+}
+
+
+
+.newsitem {
+
+font-size: 10pt; 
+
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+
+color: #000000;
+
+margin-left: 10pt;
+
+line-height: 14pt;
+
+}
+
+
+
+.extras{
+
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+
+font-size: 9pt;
+
+color: #000000;
+
+font-weight: bold;
+
+margin-left: 10pt;
+
+line-height: 14pt;
+
+}
+
+
+
+
+
+.righttitle {
+
+font-size: 13pt; 
+
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+
+color: #FFFFFF;
+
+background: #FFcc33;
+
+text-align: center;
+
+font-weight: bold;
+
+margin: 2pt;
+
+}
+
+
+
+.productheader {
+
+font-size: 13pt; 
+
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+
+color: #FFFFFF;
+
+background: #FFcc33;
+
+text-align: left;
+
+font-weight: bold;
+
+margin: 5pt;
+
+}
+
+
+
+.producttitle {
+
+font-size: 13pt; 
+
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+
+color: #000000;
+
+background: #FFFFFF;
+
+text-align: left;
+
+font-weight: bold;
+
+margin: 2pt;
+
+}
+
+
+
+.right {
+
+font-size: 9pt; 
+
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+
+line-height: 14pt;
+
+margin-left: 3pt;
+
+}
+
+
+
+.listheader {
+
+color: #606060;
+
+font-weight: normal;
+
+text-align: left;
+
+font-size: 10pt;
+
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+
+margin-left: 0px; 
+
+margin-top: 0px;
+
+}
+
+
+
+.listitem {
+
+text-align: left;
+
+font-size: 10pt;
+
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+
+margin-left: 0px;
+
+margin-top: 0px;
+
+}
+
+
+
+.component {
+
+color: #cc6600;
+
+font-weight: bold;
+
+}
+
+
+
+.unit {
+
+color: #cc6600;
+
+font-weight: bold;
+
+}
+
+
+
+.code {
+
+font-family: Courier, mono-space; 
+
+}
+
+
+
+.hint {
+
+font-size: 9pt;
+
+line-height: 11pt;
+
+margin-left: 20pt;
+
+}
+
+-->
+
+</STYLE>
+
+</HEAD>
+
+<BODY BGCOLOR="#000000" TEXT="#000000" LINK="#800000" VLINK="#800000" TOPMARGIN="0" LEFTMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0" background="gitter4.gif" alink="#800000">
+
+<BASEFONT FACE="Verdana, Arial, Helvetica, sans-serif" SIZE="2">
+
+
+
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
+
+
+
+	<TR>
+
+		<TD WIDTH="15" VALIGN="TOP"><IMG SRC="spacer.gif" WIDTH="15" HEIGHT="1" BORDER="0" ALT=""></TD>
+
+		<td width="300" valign="TOP"><A HREF="http://www.philo.de/xml/index_de.shtml"><IMG SRC="openxmllogo.gif" ALT="OPEN XML" WIDTH="300" HEIGHT="66" BORDER="0"></A></TD> 
+
+		<TD BGCOLOR="black" VALIGN="TOP" ALIGN="RIGHT" width="100%">
+
+<p class="welcome">
+
+Die neuste Version des Entity Translators finden Sie auf den
+
+<a CLASS="globalmenu" href="http://www.philo.de/xml/index_de.shtml">Internet-Seiten von Open XML</a>!
+
+</p>
+
+</TD>
+
+		<TD WIDTH="15" VALIGN="TOP"><IMG SRC="spacer.gif" WIDTH="15" HEIGHT="1" BORDER="0" ALT=""></TD>
+
+	</TR>
+
+</TABLE>
+
+	
+
+
+
+
+
+<!-------------------------------------------------->
+
+<!-- THIS IS FOR DISTANCE KEEPING                 -->
+
+<!-------------------------------------------------->		
+
+<TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0" WIDTH="100%">
+
+	<TR>
+
+		<TD Height="15"><IMG SRC="spacer.gif" WIDTH="15" HEIGHT="15" alt="" BORDER="0"></TD>
+
+	</TR>
+
+
+
+</TABLE>
+
+
+
+
+
+<!-------------------------------------------------->
+
+<!-- HERE BEGINS THE MAIN PART OF THE PAGE        -->
+
+<!-------------------------------------------------->		
+
+<TABLE BORDER="0" WIDTH="100%" cellspacing=0 cellpadding=0>
+
+<TR>
+
+	<TD WIDTH="15" rowspan="2"><IMG SRC="spacer.gif" WIDTH="15" HEIGHT="1" BORDER="0" ALT=""></TD>
+
+
+
+<!-------------------------------------------------->
+
+<!-- HERE BEGINS THE MAIN PART OF THE PAGE        -->
+
+<!-------------------------------------------------->
+
+<TABLE BORDER="0" WIDTH="100%" cellspacing=0 cellpadding=0>
+
+<TR>
+
+	<TD WIDTH="15" rowspan="3"><IMG SRC="spacer.gif" WIDTH="15" HEIGHT="1" BORDER="0" ALT=""></TD>
+
+
+
+<td BGCOLOR="white" VALIGN=TOP>
+
+
+
+<table width="100%" border="0" cellspacing="5"><tr> 
+
+
+
+<TD VALIGN="TOP" bgcolor="White">
+
+
+
+<p class="right" align="right">This page in <a href="readme.html">English</a></p>
+
+
+
+<H1>Entity Translator v1.0.1</H1>
+
+<H1>Offline Dokumentation</H1>
+
+
+
+<TABLE Width="100%" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+
+
+
+<TR><TD CLASS="headline"><P CLASS="headline">Worum handelt es sich beim Entity-Translator-Paket?</P></TD></TR>
+
+<TR><TD>																 
+
+	<DIV CLASS="newsitem">Das Entity-Translator-Paket f&uuml;r Delphi&#153; enth&auml;lt zwei Komponenten, mit denen bestimmte Elemente einer Zeichenkette durch andere ersetzt werden k&ouml;nnen.  Damit kann man beispielsweise sehr einfach herk&ouml;mmliche Strings in HTML-konforme Strings umwandeln, und umgekehrt.
+
+Die Komponente <span class="component">TCharToEntityTranslator</span> dient dazu, einzelne Zeichen eines Textes durch eine Zeichenfolge (Entity) zu ersetzen; umgekehrt kann man mit der Komponente
+
+<span class="component">TEntityToCharTranslator</span> Entities durch andere Zeichen ersetzen.  Wichtig: Entities beginnen jeweils mit demselben Zeichen (in HTML mit '&amp;') und enden jeweils mit demselben Zeichen (in HTML mit ';').
+
+	</DIV>
+
+</TD></TR>
+
+<TR><TD>&nbsp;<br>&nbsp;</TD></TR>
+
+<TR><TD CLASS="headline"><P CLASS="headline">Systemvoraussetzungen</P></TD></TR>
+
+<TR><TD>																 
+
+	<DIV CLASS="newsitem">Das Entity-Translator-Paket wurde unter Delphi 3 programmiert und getestet.  Im Grunde sollte er ebenfalls unter allen h&ouml;heren Delphi-Versionen funktionieren und vielleicht auch unter Delphi 1 und 2.   Falls Sie das Paket mit einer anderen Version als Delphi 3 getestet haben, geben Sie uns bitte eine R&uuml;ckmeldung, ob es funktioniert hat - oder nicht!
+
+</DIV>
+
+</TD></TR>
+
+<TR><TD>&nbsp;<br>&nbsp;</TD></TR>		
+
+
+
+<TR><TD CLASS="headline"><P CLASS="headline">Das Entity Translator Archiv</P></TD></TR>
+
+<TR><TD>																 
+
+	<DIV CLASS="newsitem">
+
+S&auml;mtliche Dateien, die Sie zur Installation des Entity-Translator-Pakets ben&ouml;tigen, finden Sie in einem Zip-Archiv, das Sie &uuml;ber die Internet-Seiten von Open XML herunterladen k&ouml;nnen. Dieses Archiv enth&auml;lt folgende Dateien:
+
+<table align="center" width="85%" cellspacing="10" cellpadding="0" border="0">
+
+<tr>
+
+    <td valign="BASELINE" class="code">Entity.dcr</td>
+
+    <td>Die Bitmaps f&uuml;r die Delphi-Komponenten-Palette</td>
+
+</tr>
+
+<tr>
+
+    <td valign="BASELINE" class="code">Entity.pas</td>
+
+    <td>Der Delphi-Quellcode</td>
+
+</tr>
+
+<tr>
+
+    <td valign="BASELINE" class="code">gitter4.gif</td>
+
+    <td>Ein Bild zur Verwendung in der Dokumentation</td>
+
+</tr>
+
+<tr>
+
+    <td valign="BASELINE" class="code">HtmlToLatin1.ini</td>
+
+    <td>Beispiel-Datei f&uuml;r <span class="component">TEntityToCharTranslator</span> zur Konversion von HTML in Latin1</td>
+
+</tr>
+
+<tr>
+
+    <td valign="BASELINE" class="code">Latin1ToHtml.ini</td>
+
+    <td>Beispiel-Datei f&uuml;r <span class="component">TCharToEntityTranslator</span> zur Konversion von Latin1 in HTML</td>
+
+</tr>
+
+<tr>
+
+    <td valign="BASELINE" class="code">liesmich.html</td>
+
+    <td>Die Dokumentation in Deutsch</td>
+
+</tr>
+
+<tr>
+
+    <td valign="BASELINE" class="code">openxmllogo.gif</td>
+
+    <td>Ein Bild zur Verwendung in der Dokumentation</td>
+
+</tr>
+
+<tr>
+
+    <td valign="BASELINE" class="code">readme.html</td>
+
+    <td>Die Dokumentation in Englisch</td>
+
+</tr>
+
+<tr>
+
+    <td valign="BASELINE" class="code">spacer.gif</td>
+
+    <td>Ein Bild zur Verwendung in der Dokumentation</td>
+
+</tr>
+
+</table>
+
+
+
+	</DIV>
+
+</TD></TR>
+
+<TR><TD>&nbsp;<br>&nbsp;</TD></TR>		
+
+
+
+<TR><TD CLASS="headline"><P CLASS="headline">Installation</P></TD></TR>
+
+<TR><TD>																 
+
+	<DIV CLASS="newsitem">
+
+Zur Installation gehen Sie folgenderma&szlig;en vor:
+
+<ol type="1">
+
+	<li>Legen Sie ein neues Verzeichnis an und entpacken Sie darin das Zip-Archiv.</li>
+
+	<li>W&auml;hlen Sie die Option &quot;Komponente installieren&quot; aus dem &quot;Komponente&quot;n-Men&uuml;.</li>
+
+	<li>F&uuml;gen Sie die Datei mit der Endung &quot;.pas&quot; einem neuen oder einem bereits existierenden Package hinzu.</li>
+
+	<li>Klicken Sie auf OK, und best&auml;tigen Sie anschlie&szlig;end, da&szlig; die Komponenten compiliert und installiert werden sollen.</li>
+
+	<li>Schlie&szlig;en Sie das Package-Fenster, und best&auml;tigen Sie anschlie&szlig;end, da&szlig; die &Auml;nderungen gespeichert werden sollen.</li>
+
+	<li>Sobald die Komponenten erfolgreich installiert sind, sollte in der Komponenten-Palette ein neue Seite mit dem Titel &quot;XML&quot; erscheinen. Dort finden Sie die neuen Komponenten.</li>
+
+</ol>
+
+	</DIV>
+
+</TD></TR>
+
+<TR><TD>&nbsp;<br>&nbsp;</TD></TR>		
+
+
+
+<TR><TD CLASS="headline"><P CLASS="headline">TCharToEntityTranslator Komponente</P></TD></TR>
+
+<TR><TD>																 
+
+	<DIV CLASS="newsitem">
+
+
+
+<p>	
+
+Abgeleitet von <span class="component">TComponent</span>
+
+<br>Unit: <span class="unit">Entity</span>
+
+</p>
+
+<p>
+
+Mit einer <span class="component">TCharToEntityTranslator</span>-Komponente kann man einzelne Zeichen eines Textes durch eine Zeichenfolge ersetzen.
+
+<p>
+
+
+
+<br>
+
+<h3 class="headline3">Eigenschaften</h3>
+
+
+
+<h4 class="headline4">TCharToEntityTranslator.DictionaryFile</h4>
+
+<div class="code">property DictionaryFile: TFileName</div>
+
+<p>
+
+Die Eigenschaft DictionaryFile gibt den Namen der Datei an, die die &Uuml;bersetzungstabelle enth&auml;lt, auf deren Grundlage einzelne Zeichen in Zeichenfolgen &uuml;bersetzt werden. Es mu&szlig; sich dabei um eine Text-Datei handeln, deren einzelne Zeilen die Struktur
+
+<br><span class="code">&lt;EinzelnesZeichen&gt;=&lt;Zeichenfolge&gt;</span><br>
+
+besitzen.</p>
+
+<p class="hint">Hinweis: Dem Zip-Archiv liegt eine Datei Latin1ToHTML.ini bei, mit der man einen Text, der mit einem Text-Editor und einem Latin-1-Zeichensatz erstellt wurde, in einen HTML-Text umwandeln kann. Damit wird dann zum Beispiel ein '&szlig;' umgewandelt in '&amp;szlig;'.</p>
+
+
+
+<br>
+
+<h3 class="headline3">Methoden</h3>
+
+
+
+<h4 class="headline4">TCharToEntityTranslator.Create</h4>
+
+<div class="code">constructor Create(AOwner: TComponent); override;</div>
+
+<p>
+
+Die Methode Create erzeugt und initialisiert eine Instanz von TCharToEntityTranslator. Mit Create k&ouml;nnen Sie zur Laufzeit einen CharToEntityTranslator erzeugen. F&uuml;r CharToEntityTranslatoren, die zur Entwurfszeit in einem Formular plaziert werden, wird Create automatisch aufgerufen.
+
+</p>
+
+
+
+<br>
+
+<h4 class="headline4">TCharToEntityTranslator.Translate</h4>
+
+<div class="code">function Translate(const source: string): string; virtual;</div>
+
+<p>
+
+Die Funktion Translate ersetzt einzelne Zeichen von 'source' gem&auml;&szlig; der in der Eigenschaft 'DictionaryFile' angegebenen &Uuml;bersetzungstabelle und gibt das Ergebnis in einem String zur&uuml;ck.  Der Eigenschaft 'DictionaryFile' mu&szlig; zuvor eine g&uuml;ltige &Uuml;bersetzungstabelle zugewiesen worden sein!
+
+</p>
+
+
+
+<a name="ReplaceWhiteSpace"></a>
+
+<br>
+
+<h4 class="headline4">TCharToEntityTranslator.ReplaceWhiteSpace</h4>
+
+<div class="code">function ReplaceWhiteSpace(const Source: string; const ReplaceChar: Char): string; virtual;</div>
+
+<p>
+
+Die Funktion ReplaceWhiteSpace ersetzt jedes Leerraumzeichen (SPACE, TAB, LF, CR) in String 'Source' durch das in 'ReplaceChar' angegebene Zeichen und gibt das Ergebnis als String zur&uuml;ck.
+
+</p>
+
+<p class="hint">Hinweis: Mehrere direkt hintereinander stehende Leerraumzeichen werden durch ebensoviele direkt hintereinander stehende 'ReplaceChar'-Zeichen ersetzt.</p>
+
+
+
+<a name="ReplaceChar"></a>
+
+<br>
+
+<h4 class="headline4">TCharToEntityTranslator.ReplaceChar</h4>
+
+<div class="code">function ReplaceChar(const Source: string; const FindChar, ReplaceChar: Char): string; virtual;</div>
+
+<p>
+
+Die Funktion ReplaceChar ersetzt jedes 'FindChar'-Zeichen im String 'Source' durch das in 'ReplaceChar' angegebene Zeichen und gibt das Ergebnis als String zur&uuml;ck.
+
+</p>
+
+<p class="hint">Hinweis: Diese Funktion ist im Zusammenhang mit dem PageProducer sehr n&uuml;tzlich, wenn man als Parameter-Wert einen Text &uuml;bergeben m&ouml;chte. Enth&auml;lt der Text n&auml;mlich Leerzeichen, f&uuml;hrt dies zu Fehlern bei der Verarbeitung durch den PageProducer. Um solche Fehler zu verhindern, ersetzt man vorher alle Leerzeichen eines Textes mittels der Funktion  ReplaceWhiteSpace durch ein Zeichen, das im Text garantiert nicht vorkommt. Beispiel:
+
+<br><br><span class="code">with CharToEntityTranslator1 do
+
+<br>&nbsp;&nbsp;NeuerText:= ReplaceWhiteSpace(AlterText,Char(1));</span><br><br>
+
+Im OnHTMLTag-Ereignis des PageProducers kann man dies dann wieder r&uuml;ckg&auml;ngig machen, indem man die entsprechenden Zeichen mit der Funktion ReplaceChar in SPACE verwandelt:
+
+<br><br><span class="code">with CharToEntityTranslator1 do
+
+<br>&nbsp;&nbsp;AlterText:= ReplaceChar(TagParams.Values['Value'],Char(1),' ');</span><br><br>
+
+Achtung: TABs, LFs und CRs des ursp&uuml;nglichen Textes sind nun zu SPACEs geworden! F&uuml;r HTML ist das aber in der Regel sowieso egal.</p>
+
+
+
+
+
+	</DIV>
+
+</TD></TR>
+
+<TR><TD>&nbsp;<br>&nbsp;</TD></TR>		
+
+
+
+
+
+<TR><TD CLASS="headline"><P CLASS="headline">TEntityToCharTranslator Komponente</P></TD></TR>
+
+<TR><TD>																 
+
+	<DIV CLASS="newsitem">
+
+<p>	
+
+Abgeleitet von <span class="component">TCharToEntityTranslator</span>
+
+<br>Unit: <span class="unit">Entity</span>
+
+</p>
+
+
+
+<p>Mit einer <span class="component">TEntityToCharTranslator</span>-Komponente kann man Zeichenfolgen, die durch Begrenzungszeichen markiert sind, durch andere ersetzen.</p>
+
+
+
+<br>
+
+<h3 class="headline3">Eigenschaften</h3>
+
+
+
+<h4 class="headline4">TEntityToCharTranslator.DictionaryFile</h4>
+
+<div class="code">property DictionaryFile: TFileName</div>
+
+<p>
+
+Die Eigenschaft DictionaryFile gibt den Namen der Datei an, die die &Uuml;bersetzungstabelle enth&auml;lt, auf deren Grundlage Zeichenfolgen in einzelne Zeichen &uuml;bersetzt werden. Es mu&szlig; sich dabei um eine Text-Datei handeln, deren einzelne Zeilen die Struktur
+
+<br><span class="code">&lt;Zeichenfolge&gt;=&lt;EinzelnesZeichen&gt;</span><br>
+
+besitzen, wobei alle Zeichenfolgen mit jeweils demselben Zeichen beginnen und mit jeweils demselben Zeichen schlie&szlig;en m&uuml;ssen.
+
+</p>
+
+<p class="hint">Hinweis: Dem Zip-Archiv liegt eine Datei HTMLToLatin1.ini bei, mit der man einen HTML-Text in einen Text umwandeln kann, der auf dem Latin-1-Zeichensatz basiert. Damit wird dann zum Beispiel '&amp;szlig;' in '&szlig;' umgewandelt.</p>
+
+
+
+<br>
+
+<h4 class="headline4">TEntityToCharTranslator.LeftDelimiter</h4>
+
+<div class="code">property LeftDelimiter: Char default '&amp;';</div>
+
+<p>Diese Eigenschaft enth&auml;lt das erste Zeichen, der Zeichenfolgen, die ersetzt werden sollen. Die Voreinstellung ist '&amp;'.
+
+</p>
+
+
+
+<h4 class="headline4">TEntityToCharTranslator.RightDelimiter</h4>
+
+<div class="code">property RightDelimiter: Char default ';';</div>
+
+<p>Diese Eigenschaft enth&auml;lt das letzte Zeichen, der Zeichenfolgen, die ersetzt werden sollen. Die Voreinstellung ist ';'.
+
+</p>
+
+
+
+<br>
+
+<h3 class="headline3">Methoden</h3>
+
+
+
+<h4 class="headline4">TEntityToCharTranslator.Create</h4>
+
+<div class="code">constructor Create(AOwner: TComponent); override;</div>
+
+<p>Die Methode Create erzeugt und initialisiert eine Instanz von TEntityToCharTranslator. Mit Create k&ouml;nnen Sie zur Laufzeit einen EntityToCharTranslator erzeugen. F&uuml;r EntityToCharTranslator, die zur Entwurfszeit in einem Formular plaziert werden, wird Create automatisch aufgerufen.
+
+</p>
+
+
+
+<br>
+
+<h4 class="headline4">TEntityToCharTranslator.Translate</h4>
+
+<div class="code">function Translate(const source: string): string; virtual;</div>
+
+<p>
+
+Die Funktion Translate ersetzt bestimmte Zeichenfolge von 'source' gem&auml;&szlig; der in der Eigenschaft 'DictionaryFile' angegebenen &Uuml;bersetzungstabelle und gibt das Ergebnis in einem String zur&uuml;ck.  Alle Zeichenfolgen, die ersetzt werden sollen, m&uuml;ssen mit dem Zeichen beginnen, das in der Eigenschaft LeftDelimiter angegeben ist, und m&uuml;ssen mit dem Zeichen schlie&szlig;en, da&szlig; in der Eigenschaft RightDelimiter angegeben ist.
+
+Der Eigenschaft 'DictionaryFile' mu&szlig; zuvor eine g&uuml;ltige &Uuml;bersetzungstabelle zugewiesen worden sein!
+
+</p>
+
+
+
+<br>
+
+<h4 class="headline4">TEntityToCharTranslator.ReplaceWhiteSpace</h4>
+
+<p>
+
+Siehe: <a href="#ReplaceWhiteSpace">TCharToEntityTranslator.ReplaceWhiteSpace</a>
+
+</p>
+
+
+
+<br>
+
+<h4 class="headline4">TEntityToCharTranslator.ReplaceChar</h4>
+
+<p>Siehe: <a href="#ReplaceChar">TCharToEntityTranslator.ReplaceChar</a>
+
+</p>
+
+
+
+	</DIV>
+
+</TD></TR>
+
+<TR><TD>&nbsp;<br>&nbsp;</TD></TR>		
+
+
+
+
+
+</TABLE>
+
+
+
+</TD>
+
+
+
+</tr></table>
+
+
+
+</td> 
+
+
+
+<TD WIDTH="15" rowspan="3"><IMG SRC="spacer.gif" WIDTH="15" HEIGHT="1" BORDER="0" ALT=""></TD>
+
+</TR>
+
+
+
+
+
+
+
+<!--------------------------------------->
+
+<!-- THE FOOTER                        -->
+
+<!--------------------------------------->	
+
+
+
+<TR>
+
+<td bgcolor="White"><HR NOSHADE SIZE="1" WIDTH="95%">
+
+<P ALIGN="CENTER" CLASS="plain">
+
+		<A HREF="mailto:service@philo.de">R&uuml;ckmeldungen an Open XML</A>
+
+<br>&nbsp;
+
+</P>
+
+</TD>
+
+</TR>
+
+<tr>
+
+<TD BGCOLOR="black" VALIGN="bottom">
+
+	<P CLASS="copyright" align="CENTER">
+
+		&copy; 1999, Dieter K&ouml;hler. 
+
+		All rights reserved.
+
+	</P>
+
+</td>
+
+</tr>
+
+</table>
+
+<br>&nbsp;
+
+</BODY>
+
+
+
+
+
+</HTML>

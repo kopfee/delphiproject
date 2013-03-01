@@ -1,0 +1,6 @@
+//SUPPRESSIONPROJ:Default
+//VERSION:5.00
+//ENABLE:Yes
+!include cbuilder.sup
+!include Delphi.sup
+

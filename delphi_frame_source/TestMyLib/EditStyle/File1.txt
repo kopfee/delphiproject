@@ -1,0 +1,43 @@
+object MDBCustomEdit1: TMDBCustomEdit
+    Left = 8
+    Top = 8
+    Width = 273
+    Height = 25
+    AutoSize = False
+    BorderStyle = bsNone
+    ParentColor = True
+    TabOrder = 0
+    Text = 'MDBCustomEdit1'
+    BevelInner = bvLowered
+    BevelKind = bkTile
+    BevelWidth = 2
+  end
+  object MDBCustomEdit2: TMDBCustomEdit
+    Left = 8
+    Top = 48
+    Width = 273
+    Height = 25
+    AutoSize = False
+    BorderStyle = bsNone
+    ParentColor = True
+    TabOrder = 1
+    Text = 'MDBCustomEdit1'
+    BevelInner = bvLowered
+    BevelWidth = 2
+  end
+  object MDBCustomEdit3: TMDBCustomEdit
+    Left = 8
+    Top = 88
+    Width = 273
+    Height = 22
+    AutoSize = False
+    BorderStyle = bsNone
+    ParentColor = True
+    TabOrder = 2
+    Text = 'MDBCustomEdit1'
+    BevelEdges = [beBottom]
+    BevelInner = bvLowered
+    BevelOuter = bvRaised
+    BevelKind = bkTile
+    BevelWidth = 2
+  end

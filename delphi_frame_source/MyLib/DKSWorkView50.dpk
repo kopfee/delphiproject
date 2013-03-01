@@ -1,0 +1,42 @@
+package DKSWorkView50;
+
+{$R *.RES}
+{$R 'WorkView.dcr'}
+{$ALIGN ON}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'Kingstar WorkView Package'}
+{$DESIGNONLY}
+{$IMPLICITBUILD OFF}
+{$DEFINE debug}
+
+requires
+  vcl50,
+  KSWorkView50,
+  KSIDE50;
+
+contains
+  WVReg in 'WVReg.pas',
+  WVEditors in 'WVEditors.pas',
+  WVSelFieldNames in 'WVSelFieldNames.pas' {dlgSelectFieldNames},
+  WVMemoDlg in 'WVMemoDlg.pas' {dlgMemo};
+
+end.

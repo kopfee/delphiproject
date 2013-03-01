@@ -1,0 +1,35 @@
+<% #postfix("*.htm") %>
+<html>
+<head>
+<Title>Form List</Title>
+</head>
+<body>
+<h1>Projects</h1>
+<% project(); %>
+<h2><% name("project"); %></h2>
+<% pform(); %>
+<a href="<% newfilename("@name"); %>">Form : <% property("name"); %></a><BR>
+<% endpform(); %>
+<% endproject(); %>
+</body>
+</html>
+
+<% project(); %>
+<% pform(); %>
+<% newfile("@name"); %>
+<html>
+<head>
+<Title>Component List</Title>
+</head>
+<body>
+<H1>Form : <% property("name"); %></H1>
+<table border=1>
+<tr><td>Name</td><td>ClassName</td><td>Caption</td><td>Text</td></tr>
+<% component("TComponent"); %>
+<tr><td><% name("object"); %></td><td><% name("class"); %></td><td><% property("Caption"); %></td><td><% property("Text"); %></td></tr>
+<% endcomponent(); %>
+</table>
+</body>
+</html>
+<% endpform(); %>
+<% endproject(); %>

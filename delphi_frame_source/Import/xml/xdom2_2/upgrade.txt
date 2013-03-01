@@ -1,0 +1,44 @@
+====================================================
+= HOW TO UPGRADE FROM OLDER VERSIONS TO EDOM 2.2.0 =
+====================================================
+
+
+How to update your old Delphi code
+----------------------------------
+
+1. Remove _all_ of the old components from 
+   your project's forms, since there is no 
+   longer a TDocumentObjectModel component 
+   and the remaining TXmlToDomParser component 
+   lost its DocObjMod property.
+2. Save your now incomplete projects.
+3. Uninstall the old components as described
+   below.
+4. Install the components from 'XDOM.pas' as
+   described in 'readme.html'.
+5. Reload your projects and put the new 
+   components on its forms where necessary.
+6. Adjust your source code. A list of modified
+   classes and methods can be found in the
+   file 'history.txt'. For a detailed 
+   documentation of all classes see 
+   'manual.txt'. Don't forget to replace 'Nodes'
+   by 'EDOM' in the uses clause of your units.
+   
+
+How to uninstall old components
+-------------------------------
+
+1. Choose "Components | Install Packages". 
+   A new dialog is launched.
+2. Choose the package where you previously 
+   installed the components, and open it 
+   for modification.
+3. Choose 'Node' from the list of installed
+   components, and hit the 'remove' button.
+4. Hit the 'recompile' button.
+5. Close the package window, and next confirm
+   that the modifications should be saved. 
+6. Remove all files starting with 'Nodes.'
+   from the directory where you previously
+   extracted the old zip archive.

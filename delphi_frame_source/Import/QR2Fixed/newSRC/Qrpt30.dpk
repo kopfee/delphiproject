@@ -1,0 +1,44 @@
+package qrpt30;
+
+{$R *.RES}
+{$ALIGN ON}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'QuickReport Runtime Package'}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
+
+requires
+  vcl50,
+  VCLX50,
+  VCLDB50;
+
+contains
+  Qrhtml in 'Qrhtml.pas',
+  Qrabout in 'Qrabout.pas',
+  quickrpt in 'quickrpt.pas',
+  Qrctrls in 'Qrctrls.pas',
+  Qrprgres in 'Qrprgres.pas',
+  QRPrntr in 'QRPrntr.pas',
+  Qrprev in 'Qrprev.pas',
+  Qr2const in 'Qr2const.pas';
+
+end.

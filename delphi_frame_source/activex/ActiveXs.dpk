@@ -1,0 +1,43 @@
+package ActiveXs;
+
+{$R *.RES}
+{$R 'ImgeditLibCtl_TLB.dcr'}
+{$R 'ScanLibCtl_TLB.dcr'}
+{$R 'WHOLib_TLB.dcr'}
+{$R 'AMovie_TLB.dcr'}
+{$R 'MSCommLib_TLB.dcr'}
+{$ALIGN ON}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'ActiveX Controls'}
+{$IMPLICITBUILD OFF}
+
+requires
+  vcl50;
+
+contains
+  ImgeditLibCtl_TLB in 'ImgeditLibCtl_TLB.pas',
+  ScanLibCtl_TLB in 'ScanLibCtl_TLB.pas',
+  WHOLib_TLB in 'WHOLib_TLB.pas',
+  AMovie_TLB in 'AMovie_TLB.pas',
+  MSCommLib_TLB in 'MSCommLib_TLB.pas';
+
+end.

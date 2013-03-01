@@ -1,0 +1,35 @@
+======================================================
+= EXTENDED DOCUMENT OBJECT MODEL BUG- AND TO-DO-LIST =
+======================================================
+
+BUGS
+----
+
+- TdomImplementation.createDocumentType() raises an
+  Access Violation.
+- The parser does not set TXmlParserError.StartLine 
+  and TXmlParserError.Endline when an error occures.
+- Namesspace-aware TdomEntityDeclaration and
+  TdomEntity nodes have not been tested yet.
+
+
+TO DO
+-----
+
+- entity reference expansion while parsing 
+  a document.
+- redesign the parser to use "SAX-like" events
+- Revise the code() methods to conform to James
+  Clark's "Canonical XML" 
+  (see "http://www.jclark.com/xml/canonxml.html").
+- Events on DOM tree modifications such as 
+  OnBeforeRemoveNode, ...
+- ExpandEntityReferences support for nodeIterators
+  and TreeWalkers.
+- change type of RefNode parameter of some parser 
+  methods from TdomNode into a more specific type.
+- implement correct parameter entity treatment 
+  when parsing the external subset.
+- document validation.
+- SaveToStream/LoadFromStream method for nodes.
+- optimize parsing speed.

@@ -1,0 +1,60 @@
+{我的工程管理组}=
+{
+  {别名}=
+  {
+    ('HYL','C:\HuangYL');
+    ('mylib','C:\HuangYL\lib\MyLib');
+    ('testlib','C:\HuangYL\lib\TestMyLib');
+    ('image','C:\Program Files\Common Files\Borland Shared\Images\Buttons');
+    ('delphi','C:\Program Files\Borland\Delphi5');
+    ('国通','C:\国通');
+  };
+  {打开方式}=
+  {
+    ('pas','内部');
+    ('dpr','内部');
+    ('dpk','内部');
+    ('dfm','内部');
+    ('ini','内部');
+    ('txt','内部');
+    ('bat','内部');
+    ('sql','内部');
+    ('bpg','内部');
+  };
+  {文档}=
+  {
+    {需求分析}=
+    {
+    };
+    {详细设计}=
+    {
+    };
+    {用户手册}=
+    {
+    };
+  };
+  {程序}=
+  {
+    ('国通50.bpg','$(国通)\Source\国通50.bpg');
+    ('KSPackages50.bpg','$(mylib)\KSPackages50.bpg');
+    ('Report50.bpg','$(HYL)\lib\Report\Report50.bpg');
+    ('ReportTools50.bpg','$(HYL)\lib\Report\Tools\ReportTools50.bpg');
+    ('SuperClipboard.dpr','$(HYL)\windows\SuperClipboard\SuperClipboard.dpr');
+    ('RemWords.dpr','$(HYL)\RememberWords\RemWords.dpr');
+    ('CheckerGroup.bpg','$(HYL)\IDE\ComponentChecker\CheckerGroup.bpg');
+    ('ProjectManager50.bpg','$(HYL)\IDE\ProjectMan\ProjectManager50.bpg');
+    ('国通','$(国通)\Source\国通50.PFG');
+    ('VirtualDeskGroup.bpg','$(HYL)\App\VirtualDesktop\VirtualDeskGroup.bpg');
+  };
+  {资源}=
+  {
+    {位图}=
+    {
+      ('标准','$(image)');
+    };
+  };
+  {常用目录}=
+  {
+    ('Delphi Bin','$(delphi)\Bin');
+  };
+};

@@ -1,0 +1,74 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = KSBase60.bpl KSBaseX60.bpl DKSBaseX60.bpl KSUser60.bpl DKSUser60.bpl \
+  KSIDE60.bpl KSStyle60.bpl DKSStyle60.bpl KSWorkView60.bpl DKSWorkView60.bpl \
+  KSHDB60.bpl DKSHDB60.bpl KSCom60.bpl DKSCom60.bpl KSTextTag60.bpl \
+  KSReport60.bpl DKSReport60.bpl KSGTPlatform60.bpl
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+KSBase60.bpl: KSBase60.dpk
+  $(DCC)
+
+KSUser60.bpl: KSUser60.dpk
+  $(DCC)
+
+KSStyle60.bpl: KSStyle60.dpk
+  $(DCC)
+
+KSWorkView60.bpl: KSWorkView60.dpk
+  $(DCC)
+
+DKSUser60.bpl: DKSUser60.dpk
+  $(DCC)
+
+KSBaseX60.bpl: KSBaseX60.dpk
+  $(DCC)
+
+DKSBaseX60.bpl: DKSBaseX60.dpk
+  $(DCC)
+
+KSHDB60.bpl: ..\StdIntf\KSHDB60.dpk
+  $(DCC)
+
+KSCom60.bpl: ..\Import\KsComLib\KSCom60.dpk
+  $(DCC)
+
+KSReport60.bpl: ..\Report\KSReport60.dpk
+  $(DCC)
+
+KSGTPlatform60.bpl: KSGTPlatform60.dpk
+  $(DCC)
+
+KSIDE60.bpl: KSIDE60.dpk
+  $(DCC)
+
+DKSStyle60.bpl: DKSStyle60.dpk
+  $(DCC)
+
+DKSWorkView60.bpl: DKSWorkView60.dpk
+  $(DCC)
+
+DKSHDB60.bpl: ..\StdIntf\DKSHDB60.dpk
+  $(DCC)
+
+DKSReport60.bpl: ..\Report\DKSReport60.dpk
+  $(DCC)
+
+DKSCom60.bpl: ..\Import\KsComLib\DKSCom60.dpk
+  $(DCC)
+
+KSTextTag60.bpl: ..\TextTag\KSTextTag60.dpk
+  $(DCC)
+
+

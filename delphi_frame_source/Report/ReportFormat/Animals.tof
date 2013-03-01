@@ -1,0 +1,7 @@
+Animals Report<%
+  DataEntry("Animals","Animals");
+%>
+Name        Weight  Size
+--------------------------------
+<%ForLoop("Animals")%><%FieldValue("Name","12","Left")%><%FieldValue("Weight","6","Center")%><%FieldValue("Size","6","Right")%>
+<%EndLoop()%>--------------------------------

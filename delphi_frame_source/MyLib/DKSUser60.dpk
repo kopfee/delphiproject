@@ -1,0 +1,44 @@
+package DKSUser60;
+
+{$R *.res}
+{$R 'KSUser.dcr'}
+{$ALIGN 8}
+{$ASSERTIONS OFF}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'Kingstar User''s Components'}
+{$DESIGNONLY}
+{$IMPLICITBUILD ON}
+{$DEFINE debug}
+
+requires
+  vcl,
+  vcldb,
+  KSUser60,
+  bdertl,
+  designide;
+
+contains
+  RegUser in 'RegUser.pas',
+  u_dlgAddComp in 'u_dlgAddComp.pas' {dlgAddComponentsToGroup},
+  CompEditors in 'CompEditors.pas',
+  dCMUtils in 'dCMUtils.pas';
+
+end.

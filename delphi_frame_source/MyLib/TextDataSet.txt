@@ -1,0 +1,8 @@
+<FieldLength> ::= <Integer>
+<DisplayName> ::= <SimpleString>
+<FieldName>   ::= <SimpleString>
+<Field>       ::= "<DisplayName>"="<FieldName>"[<FieldLength>]
+<Fields>      ::= <Field>;|<Field>,<Fields>
+<FieldData>   ::= "<SimpleString>"
+<RecordData>  ::= <FieldData>;|<FieldData>,<RecordData>
+<Dataset>     ::= <Fields><RecordData> 

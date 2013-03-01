@@ -1,0 +1,126 @@
+package KSGTPlatform50;
+
+{$R *.RES}
+{$ALIGN ON}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'Kingstar Platform Runtime Package For GT'}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
+{$DEFINE DEBUG}
+
+requires
+  Vcl50,
+  Vclx50,
+  Vcldb50,
+  VclSmp50;
+
+contains
+  ColorUtils in 'ColorUtils.pas',
+  ComWriUtils in 'ComWriUtils.pas',
+  CompUtils in 'CompUtils.pas',
+  DrawUtils in 'DrawUtils.pas',
+  extutils in 'ExtUtils.pas',
+  FormUtils in 'FormUtils.pas',
+  Listeners in 'Listeners.pas',
+  LogFile in 'LogFile.pas',
+  LibMessages in 'LibMessages.pas',
+  PrintUtils in 'PrintUtils.pas',
+  NetUtils in 'NetUtils.pas',
+  Safecode in 'SafeCode.pas',
+  TextUtils in 'TextUtils.pas',
+  ThrddCF in 'ThrddCF.pas',
+  IPCUtils in 'IPCUtils.pas',
+  IntfUtils in 'IntfUtils.pas',
+  WinUtils in 'WinUtils.pas',
+  winobjs in 'WinObjs.pas',
+  DebugMemory in 'DebugMemory.pas',
+  TypUtils in 'TypUtils.pas',
+  TxtDB in 'TxtDB.pas',
+  TxtDBEx in 'TxtDBEx.pas',
+  KSStrUtils in 'KSStrUtils.pas',
+  ConvertUtils in 'ConvertUtils.pas',
+  ObjDir in 'ObjDir.pas',
+  compItems in 'compItems.pas',
+  CompGroup in 'CompGroup.pas',
+  SubWindows in 'SubWindows.pas',
+  ShellUtils in 'ShellUtils.pas',
+  FORecord in 'FORecord.pas',
+  ClipbrdMon in 'ClipbrdMon.pas',
+  MsgFilters in 'MsgFilters.pas',
+  USubs in 'USubs.pas',
+  KSNotebooks in 'KSNotebooks.pas',
+  HotKeyMons in 'HotKeyMons.pas',
+  UIStyles in 'UIStyles.pas',
+  UICtrls in 'UICtrls.pas',
+  ImagesMan in 'ImagesMan.pas',
+  ImageCtrls in 'ImageCtrls.pas',
+  WorkViews in 'WorkViews.pas',
+  DataTypes in 'DataTypes.pas',
+  WVCtrls in 'WVCtrls.pas',
+  WVCommands in 'WVCommands.pas',
+  WVCmdTypeInfo in 'WVCmdTypeInfo.pas',
+  WVCmdProc in 'WVCmdProc.pas',
+  WVCmdReq in 'WVCmdReq.pas',
+  WVUtils in 'WVUtils.pas',
+  DBAIntf in '..\StdIntf\DBAIntf.pas',
+  BDACore in '..\StdIntf\BDACore.pas',
+  BDAImp in '..\StdIntf\BDAImp.pas',
+  BDAImpEx in '..\StdIntf\BDAImpEx.pas',
+  DataDict in '..\StdIntf\DataDict.pas',
+  DBAHelper in '..\StdIntf\DBAHelper.pas',
+  BasicDataAccess_TLB in '..\StdIntf\BasicDataAccess_TLB.pas',
+  KCWVProcBinds in '..\Import\KsComLib\KCWVProcBinds.pas',
+  KCDataAccess in '..\Import\KsComLib\KCDataAccess.pas',
+  KCDataPack in '..\Import\KsComLib\KCDataPack.pas',
+  DRTPAPI in '..\Import\KsComLib\DRTPAPI.pas',
+  RPBands in '..\Report\RPBands.pas',
+  RPCtrls in '..\Report\RPCtrls.pas',
+  RPDB in '..\Report\RPDB.pas',
+  RPDBCB in '..\Report\RPDBCB.pas',
+  RPDBCBImp in '..\Report\RPDBCBImp.pas',
+  RPDBCBVCL in '..\Report\RPDBCBVCL.pas',
+  RPDBVCL in '..\Report\RPDBVCL.pas',
+  RPDefines in '..\Report\RPDefines.pas',
+  RPDesignInfo in '..\Report\RPDesignInfo.pas',
+  RPEasyReports in '..\Report\RPEasyReports.pas',
+  RPPreview in '..\Report\RPPreview.pas' {dlgPreview},
+  RPPrintObjects in '..\Report\RPPrintObjects.pas',
+  RPProcessors in '..\Report\RPProcessors.pas',
+  PrintDevices in '..\Report\PrintDevices.pas',
+  TextTags in '..\TextTag\TextTags.pas',
+  TextOutScripts in '..\TextTag\TextOutScripts.pas',
+  FuncScripts in '..\TextTag\FuncScripts.pas',
+  WVDBBinders in 'WVDBBinders.pas',
+  ProgressShowing in 'ProgressShowing.pas' {fmProgressShowing},
+  EditExts in 'EditExts.pas',
+  RPDBDesignInfo in '..\Report\RPDBDesignInfo.pas',
+  RPProgress in '..\Report\RPProgress.pas' {dlgPrintProgress},
+  FilterStreams in 'FilterStreams.pas',
+  KSHints in 'KSHints.pas',
+  RegSvrUtils in 'RegSvrUtils.pas',
+  KsChineseSpell in 'KsChineseSpell.pas',
+  FilterCombos in 'FilterCombos.pas',
+  KSKeyboard in 'KSKeyboard.pas',
+  NB30 in 'Nb30.pas',
+  KSActions in 'KSActions.pas';
+
+end.

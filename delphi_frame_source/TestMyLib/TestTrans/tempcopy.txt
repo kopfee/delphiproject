@@ -1,0 +1,48 @@
+
+procedure TRichEditEx.WMPaint(var Message: TWMPaint);
+var
+  DC, MemDC,saveDC: HDC;
+  MemBitmap, OldBitmap: HBITMAP;
+  NoDC : boolean;
+begin
+  {if painting then inherited
+  else begin
+  painting := true;}
+  invalidaterect(handle,nil,false);
+  //inherited;
+  defaultHandler(Message);
+    NoDC := Message.DC=0;
+    SaveDC := Message.DC;
+    DC := GetDC(0);
+    MemBitmap := CreateCompatibleBitmap(DC, ClientRect.Right, ClientRect.Bottom);
+    ReleaseDC(0, DC);
+    if NoDC then //DC := BeginPaint(Handle, PS)
+      DC := GetDC(handle)
+      else DC:=SaveDC;
+    MemDC := CreateCompatibleDC(0);
+    OldBitmap := SelectObject(MemDC, MemBitmap);
+    try
+      // copy DC to MemDC
+      BitBlt(MemDC,0,0,ClientRect.Right, ClientRect.Bottom,DC,0,0,SRCCOPY);
+      // paint background to DC
+      if parent is TBackGround then
+        (parent as TBackGround).PaintCtrlBkGround(self,dc)
+      else BitBlt(DC,0,0,ClientRect.Right, ClientRect.Bottom,0,0,0,Whiteness);
+     { // for test
+      //BitBlt(TestCanvas.handle,x1,y2,width,height,BGBitmap.Canvas.handle,0,0,SRCCOPY);
+      BitBlt(TestCanvas.handle,x1,y1,width,height,DC,0,0,SRCCOPY);
+      BitBlt(TestCanvas.handle,x2,y2,width,height,MemDC,0,0,SRCCOPY);
+      // end test}
+
+      StretchBltTransparent(DC,0,0,width,height,MemDC,0,0,width,height,0,color);
+      ValidateRect(handle,nil);
+      if NoDC then //EndPaint(Handle, PS);
+      releaseDC(handle,DC);
+    finally
+      SelectObject(MemDC, OldBitmap);
+      DeleteDC(MemDC);
+      DeleteObject(MemBitmap);
+    end;
+    {painting := false;
+  end;}
+end;

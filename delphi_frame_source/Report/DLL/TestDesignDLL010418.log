@@ -1,0 +1,6 @@
+16:34:22 EAccessViolation Access violation at address 004094F2 in module 'TestDesignDLL.exe'. Write of address 002347C5
+16:35:27 EAccessViolation Access violation at address 004094F2 in module 'TestDesignDLL.exe'. Write of address 002347C5
+16:36:32 EAccessViolation Access violation at address 004094F2 in module 'TestDesignDLL.exe'. Write of address 002347C5
+16:37:32 EAccessViolation Access violation at address 004094F2 in module 'TestDesignDLL.exe'. Write of address 002347C5
+17:31:05 EDatabaseError
+17:31:13 EAccessViolation Access violation at address 004094F2 in module 'TestDesignDLL.exe'. Write of address 002347C5

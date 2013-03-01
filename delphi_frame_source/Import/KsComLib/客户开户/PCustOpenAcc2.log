@@ -1,0 +1,29 @@
+18:26:20 Command:[客户帐号校验.1]客户号=2;帐号类别=;存在=;
+18:26:20 TKCAccess[00D0D184] create.
+18:26:20 trigerEvent0
+18:26:20 new dbaccess ok
+18:26:20 use new dbaccess
+18:26:20 trigerEvent2
+18:26:20 Send At Time 17515636
+18:26:20 trigerEvent3
+18:26:21 Receive At Time 17515946
+18:26:21 add listener
+18:26:21 trigerEvent4
+18:26:21 nextResponse:1
+18:26:21 THField[00D0C658] create.
+18:26:21 Dataset[00D038E8] opened. fields : 1
+18:26:21 Dataset[00D038E8] read rows : 1
+18:26:21 THDataset[00D038E8] Datarows : 1
+18:26:21 trigerEvent5
+18:26:21 Send At Time 17515956
+18:26:21 Receive At Time 17516347
+18:26:21 pool dbaccess
+18:26:21 remove listener
+18:26:21 Command:[客户帐号校验.1]客户号=2;帐号类别=;存在=0;
+18:26:27 THField[00D0C658] Destroy.
+18:26:27 begin free THDataset
+18:26:27 THDataset[00D038E8] Destroy.
+18:26:27 trigerEvent6
+18:26:27 trigerEvent1
+18:26:27 count=0
+18:26:27 TKCAccess[00D0D184] Destroy.

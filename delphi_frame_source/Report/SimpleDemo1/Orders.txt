@@ -1,0 +1,67 @@
+Orders Detail Report
+CustNo      Company         OrderNo  Payment   ItemNo  PartNo
+----------------------------------------------------------------
+1221     Kauai Dive Shoppe   1023      Check     1       1313      
+1221     Kauai Dive Shoppe   1023      Check     2       2383      
+1221     Kauai Dive Shoppe   1023      Check     3       1330      
+1221     Kauai Dive Shoppe   1076      Visa      1       11221     
+1221     Kauai Dive Shoppe   1076      Visa      2       11518     
+1221     Kauai Dive Shoppe   1076      Visa      3       1946      
+1221     Kauai Dive Shoppe   1123      Check     1       1314      
+1221     Kauai Dive Shoppe   1123      Check     2       1314      
+1221     Kauai Dive Shoppe   1123      Check     3       1986      
+1221     Kauai Dive Shoppe   1123      Check     4       2630      
+1221     Kauai Dive Shoppe   1123      Check     5       5324      
+1221     Kauai Dive Shoppe   1123      Check     6       5349      
+1221     Kauai Dive Shoppe   1169      Credit    1       912       
+1221     Kauai Dive Shoppe   1169      Credit    2       1330      
+1221     Kauai Dive Shoppe   1169      Credit    3       2657      
+1221     Kauai Dive Shoppe   1169      Credit    4       2954      
+1221     Kauai Dive Shoppe   1169      Credit    5       5356      
+1221     Kauai Dive Shoppe   1169      Credit    6       7654      
+1221     Kauai Dive Shoppe   1169      Credit    7       9318      
+1221     Kauai Dive Shoppe   1169      Credit    8       9354      
+1221     Kauai Dive Shoppe   1176      Visa      1       2619      
+1221     Kauai Dive Shoppe   1176      Visa      2       2648      
+1221     Kauai Dive Shoppe   1176      Visa      3       9316      
+1221     Kauai Dive Shoppe   1176      Visa      4       11635     
+1221     Kauai Dive Shoppe   1269      Credit    1       5378      
+1231           Unisco        1060      Check     1       5324      
+1231           Unisco        1060      Check     2       5349      
+1231           Unisco        1060      Check     3       11518     
+1231           Unisco        1060      Check     4       12301     
+1231           Unisco        1073      MC        1       2954      
+1231           Unisco        1073      MC        2       11221     
+1231           Unisco        1102      Credit    1       1328      
+1231           Unisco        1102      Credit    2       2350      
+1231           Unisco        1102      Credit    3       9312      
+1231           Unisco        1102      Credit    4       9318      
+1231           Unisco        1160      Check     1       1364      
+1231           Unisco        1160      Check     2       1390      
+1231           Unisco        1160      Check     3       2613      
+1231           Unisco        1160      Check     4       5324      
+1231           Unisco        1160      Check     5       7612      
+1231           Unisco        1160      Check     6       9354      
+1231           Unisco        1173      MC        1       2630      
+1231           Unisco        1178      Credit    1       900       
+1231           Unisco        1178      Credit    2       1390      
+1231           Unisco        1178      Credit    3       5324      
+1231           Unisco        1178      Credit    4       7612      
+1231           Unisco        1178      Credit    5       11652     
+1231           Unisco        1178      Credit    6       12301     
+1231           Unisco        1202      Credit    1       3326      
+1231           Unisco        1202      Credit    2       9316      
+1231           Unisco        1202      Credit    3       9318      
+1231           Unisco        1278      Credit    1       3316      
+1231           Unisco        1278      Credit    2       5356      
+1231           Unisco        1278      Credit    3       9312      
+1231           Unisco        1278      Credit    4       9318      
+1231           Unisco        1278      Credit    5       11518     
+1231           Unisco        1302      Credit    1       912       
+1231           Unisco        1302      Credit    2       1314      
+1231           Unisco        1302      Credit    3       1330      
+1231           Unisco        1302      Credit    4       2341      
+1231           Unisco        1302      Credit    5       2630      
+1231           Unisco        1302      Credit    6       11238     
+1231           Unisco        1302      Credit    7       11564     
+----------------------------------------------------------------

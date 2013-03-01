@@ -1,0 +1,71 @@
+package KSUser50;
+
+{$R *.RES}
+{$ALIGN ON}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'Kingstar Users'' Components'}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
+{$DEFINE VER110}
+{$DEFINE debug}
+
+requires
+  vcl50,
+  VCLDB50,
+  VCLX50,
+  INET50,
+  VCLJPG50,
+  VCLSMP50,
+  KSBase50,
+  KSBaseX50,
+  Vclbde50;
+
+contains
+  Container in 'Container.pas',
+  CMUtils in 'CMUtils.pas',
+  DBListOne in 'DBListOne.pas',
+  BkGround in 'BkGround.pas',
+  RTFUtils in 'RTFUtils.pas',
+  Design in 'Design.pas',
+  KeyCap in 'KeyCap.pas',
+  FontStyles in 'FontStyles.pas',
+  TreeItems in 'TreeItems.pas',
+  DBTreeItems in 'DBTreeItems.pas',
+  AMovieUtils in 'AMovieUtils.pas',
+  SimpCtrls in 'SimpCtrls.pas',
+  ExtDialogs in 'ExtDialogs.pas',
+  GridEx in 'GridEx.pas',
+  MovieViewer in 'MovieViewer.pas' {MovieView: TContainer},
+  PenCfgDlg in 'PenCfgDlg.pas' {dlgPenCfg},
+  DragMoveUtils in 'DragMoveUtils.pas',
+  StorageUtils in 'StorageUtils.pas',
+  SimpBmp in 'SimpBmp.pas',
+  QuartzTypeLib_TLB in 'QuartzTypeLib_TLB.pas',
+  Datares in 'Datares.pas',
+  ProgReptDlg in 'ProgReptDlg.pas' {dlgProgressReport},
+  ProgressDlgs in 'ProgressDlgs.pas',
+  Design2 in 'Design2.pas',
+  DBComboLists in 'DBComboLists.pas',
+  AbilityManager in 'AbilityManager.pas',
+  ComboLists in 'ComboLists.pas';
+
+end.

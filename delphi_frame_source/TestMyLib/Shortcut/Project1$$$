@@ -1,0 +1,88 @@
+[Main Window]
+Create=1
+Visible=1
+State=0
+Left=0
+Top=0
+Width=1024
+Height=137
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=1016
+ClientHeight=105
+
+[PropertyInspector]
+Create=1
+Visible=1
+State=0
+Left=0
+Top=118
+Width=301
+Height=494
+MaxLeft=-1
+MaxTop=-1
+ClientWidth=291
+ClientHeight=465
+TBDockHeight=494
+LRDockWidth=301
+Dockable=1
+SplitPos=152
+
+[Closed Files]
+File_0=SourceModule,'D:\HuangYL\lib\TestMyLib\Shortcut\Unit1.pas',0,1,35,1,49,0,0
+File_1=SourceModule,'D:\HuangYL\Lib\MyLib\ShortcutEx.pas',0,1,120,34,131,0,0
+File_2=SourceModule,'D:\HuangYL\lib\MyLib\EditExts.pas',0,1,193,7,212,0,0
+File_3=SourceModule,'D:\HuangYL\lib\MyLib\HdExcpEx.pas',0,1,1,6,1,0,0
+File_4=SourceModule,'D:\HuangYL\lib\TestMyLib\HandleException\Unit1.pas',0,1,98,20,115,1,0
+File_5=SourceModule,'c:\program files\borland\delphi4\source\vcl\Controls.pas',0,13,1051,90,1051,0,0
+File_6=SourceModule,'D:\HuangYL\lib\TestMyLib\DigitalEdit\Unit1.pas',0,1,1,1,2,1,1
+File_7=SourceModule,'D:\ÖÐÔ¶\doc\QueryLocal.sql',0,1,1,33,3,0,0
+File_8=SourceModule,'c:\program files\borland\delphi4\source\rtl\Win\Windows.pas',0,15,30693,41,30693,0,0
+File_9=SourceModule,'c:\program files\borland\delphi4\source\vcl\StdCtrls.pas',0,1,1,24,1,0,0
+
+[Modules]
+Count=0
+EditWindowCount=0
+
+[C:\Program Files\Borland\Delphi4\Projects\ProjectGroup1.bpg]
+FormState=0
+FormOnTop=0
+
+[D:\HuangYL\lib\TestMyLib\Shortcut\Project1.dpr]
+FormState=0
+FormOnTop=0
+
+[DockHosts]
+DockHostCount=0
+
+[Watches]
+Count=0
+
+[Breakpoints]
+Count=0
+
+[AddressBreakpoints]
+Count=0
+
+[PVCS Browser]
+Left=236
+Top=105
+Width=625
+Height=393
+State=0
+Visible=0
+
+[PVCS VDiff]
+Left=257
+Top=127
+Width=591
+Height=608
+Layout=1
+Orientation=1
+State=0
+Visible=0
+File1Color=16711680
+File2Color=255
+SpaceColor=16776960
+TextColor=0
+

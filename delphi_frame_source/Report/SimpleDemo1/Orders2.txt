@@ -1,0 +1,171 @@
+Orders Detail Report
+CustNo      Company         OrderNo  Payment   ItemNo  PartNo
+================================================================
+1221     Kauai Dive Shoppe   1023      Check     1       1313      
+1221     Kauai Dive Shoppe   1023      Check     2       2383      
+1221     Kauai Dive Shoppe   1023      Check     3       1330      
+----------------------------------------------------------------
+1221     Kauai Dive Shoppe   1076      Visa      1       11221     
+1221     Kauai Dive Shoppe   1076      Visa      2       11518     
+1221     Kauai Dive Shoppe   1076      Visa      3       1946      
+----------------------------------------------------------------
+1221     Kauai Dive Shoppe   1123      Check     1       1314      
+1221     Kauai Dive Shoppe   1123      Check     2       1314      
+1221     Kauai Dive Shoppe   1123      Check     3       1986      
+1221     Kauai Dive Shoppe   1123      Check     4       2630      
+1221     Kauai Dive Shoppe   1123      Check     5       5324      
+1221     Kauai Dive Shoppe   1123      Check     6       5349      
+----------------------------------------------------------------
+1221     Kauai Dive Shoppe   1169      Credit    1       912       
+1221     Kauai Dive Shoppe   1169      Credit    2       1330      
+1221     Kauai Dive Shoppe   1169      Credit    3       2657      
+1221     Kauai Dive Shoppe   1169      Credit    4       2954      
+1221     Kauai Dive Shoppe   1169      Credit    5       5356      
+1221     Kauai Dive Shoppe   1169      Credit    6       7654      
+1221     Kauai Dive Shoppe   1169      Credit    7       9318      
+1221     Kauai Dive Shoppe   1169      Credit    8       9354      
+----------------------------------------------------------------
+1221     Kauai Dive Shoppe   1176      Visa      1       2619      
+1221     Kauai Dive Shoppe   1176      Visa      2       2648      
+1221     Kauai Dive Shoppe   1176      Visa      3       9316      
+1221     Kauai Dive Shoppe   1176      Visa      4       11635     
+----------------------------------------------------------------
+1221     Kauai Dive Shoppe   1269      Credit    1       5378      
+----------------------------------------------------------------
+================================================================
+1231           Unisco        1060      Check     1       5324      
+1231           Unisco        1060      Check     2       5349      
+1231           Unisco        1060      Check     3       11518     
+1231           Unisco        1060      Check     4       12301     
+----------------------------------------------------------------
+1231           Unisco        1073      MC        1       2954      
+1231           Unisco        1073      MC        2       11221     
+----------------------------------------------------------------
+1231           Unisco        1102      Credit    1       1328      
+1231           Unisco        1102      Credit    2       2350      
+1231           Unisco        1102      Credit    3       9312      
+1231           Unisco        1102      Credit    4       9318      
+----------------------------------------------------------------
+1231           Unisco        1160      Check     1       1364      
+1231           Unisco        1160      Check     2       1390      
+1231           Unisco        1160      Check     3       2613      
+1231           Unisco        1160      Check     4       5324      
+1231           Unisco        1160      Check     5       7612      
+1231           Unisco        1160      Check     6       9354      
+----------------------------------------------------------------
+1231           Unisco        1173      MC        1       2630      
+----------------------------------------------------------------
+1231           Unisco        1178      Credit    1       900       
+1231           Unisco        1178      Credit    2       1390      
+1231           Unisco        1178      Credit    3       5324      
+1231           Unisco        1178      Credit    4       7612      
+1231           Unisco        1178      Credit    5       11652     
+1231           Unisco        1178      Credit    6       12301     
+----------------------------------------------------------------
+1231           Unisco        1202      Credit    1       3326      
+1231           Unisco        1202      Credit    2       9316      
+1231           Unisco        1202      Credit    3       9318      
+----------------------------------------------------------------
+1231           Unisco        1278      Credit    1       3316      
+1231           Unisco        1278      Credit    2       5356      
+1231           Unisco        1278      Credit    3       9312      
+1231           Unisco        1278      Credit    4       9318      
+1231           Unisco        1278      Credit    5       11518     
+----------------------------------------------------------------
+1231           Unisco        1302      Credit    1       912       
+1231           Unisco        1302      Credit    2       1314      
+1231           Unisco        1302      Credit    3       1330      
+1231           Unisco        1302      Credit    4       2341      
+1231           Unisco        1302      Credit    5       2630      
+1231           Unisco        1302      Credit    6       11238     
+1231           Unisco        1302      Credit    7       11564     
+----------------------------------------------------------------
+================================================================
+1351        Sight Diver      1003      Credit    1       1313      
+----------------------------------------------------------------
+1351        Sight Diver      1052      Credit    1       5313      
+1351        Sight Diver      1052      Credit    2       11221     
+----------------------------------------------------------------
+1351        Sight Diver      1055      Credit    1       2367      
+1351        Sight Diver      1055      Credit    2       2954      
+1351        Sight Diver      1055      Credit    3       12386     
+1351        Sight Diver      1055      Credit    4       13545     
+----------------------------------------------------------------
+1351        Sight Diver      1067      Visa      1       12317     
+----------------------------------------------------------------
+1351        Sight Diver      1075      MC        1       5324      
+1351        Sight Diver      1075      MC        2       5349      
+1351        Sight Diver      1075      MC        3       12316     
+----------------------------------------------------------------
+1351        Sight Diver      1087      Credit    1       2619      
+1351        Sight Diver      1087      Credit    2       5324      
+----------------------------------------------------------------
+1351        Sight Diver      1152      Credit    1       900       
+1351        Sight Diver      1152      Credit    2       912       
+1351        Sight Diver      1152      Credit    3       1313      
+1351        Sight Diver      1152      Credit    4       1314      
+1351        Sight Diver      1152      Credit    5       1316      
+1351        Sight Diver      1152      Credit    6       1320      
+1351        Sight Diver      1152      Credit    7       1328      
+1351        Sight Diver      1152      Credit    8       1330      
+1351        Sight Diver      1152      Credit    9       1364      
+1351        Sight Diver      1152      Credit    10      2314      
+1351        Sight Diver      1152      Credit    11      2341      
+1351        Sight Diver      1152      Credit    12      2343      
+1351        Sight Diver      1152      Credit    13      2350      
+1351        Sight Diver      1152      Credit    14      2612      
+1351        Sight Diver      1152      Credit    15      2648      
+1351        Sight Diver      1152      Credit    527     2954      
+1351        Sight Diver      1152      Credit    528     3326      
+1351        Sight Diver      1152      Credit    529     3340      
+1351        Sight Diver      1152      Credit    530     5313      
+1351        Sight Diver      1152      Credit    531     5356      
+1351        Sight Diver      1152      Credit    532     5378      
+1351        Sight Diver      1152      Credit    533     5386      
+1351        Sight Diver      1152      Credit    534     7612      
+1351        Sight Diver      1152      Credit    535     7619      
+1351        Sight Diver      1152      Credit    536     9312      
+1351        Sight Diver      1152      Credit    537     9316      
+1351        Sight Diver      1152      Credit    538     9354      
+1351        Sight Diver      1152      Credit    539     11221     
+1351        Sight Diver      1152      Credit    540     11652     
+1351        Sight Diver      1152      Credit    541     12301     
+1351        Sight Diver      1152      Credit    542     12303     
+----------------------------------------------------------------
+1351        Sight Diver      1155      Credit    1       912       
+1351        Sight Diver      1155      Credit    2       2341      
+1351        Sight Diver      1155      Credit    3       2343      
+1351        Sight Diver      1155      Credit    4       2383      
+1351        Sight Diver      1155      Credit    5       2619      
+1351        Sight Diver      1155      Credit    6       3326      
+1351        Sight Diver      1155      Credit    7       9354      
+1351        Sight Diver      1155      Credit    8       12301     
+----------------------------------------------------------------
+1351        Sight Diver      1163      Credit    1       1320      
+----------------------------------------------------------------
+1351        Sight Diver      1255      Credit    1       900       
+1351        Sight Diver      1255      Credit    2       1320      
+1351        Sight Diver      1255      Credit    3       1390      
+1351        Sight Diver      1255      Credit    4       2383      
+1351        Sight Diver      1255      Credit    5       2390      
+1351        Sight Diver      1255      Credit    6       2630      
+1351        Sight Diver      1255      Credit    7       5318      
+1351        Sight Diver      1255      Credit    8       12303     
+----------------------------------------------------------------
+1351        Sight Diver      1275      MC        1       1320      
+1351        Sight Diver      1275      MC        2       1330      
+1351        Sight Diver      1275      MC        3       2367      
+1351        Sight Diver      1275      MC        4       2390      
+1351        Sight Diver      1275      MC        5       2619      
+1351        Sight Diver      1275      MC        6       2630      
+1351        Sight Diver      1275      MC        7       2632      
+1351        Sight Diver      1275      MC        8       2648      
+1351        Sight Diver      1275      MC        9       2657      
+1351        Sight Diver      1275      MC        10      3340      
+1351        Sight Diver      1275      MC        11      5378      
+1351        Sight Diver      1275      MC        12      9312      
+1351        Sight Diver      1275      MC        13      11652     
+1351        Sight Diver      1275      MC        14      12301     
+----------------------------------------------------------------
+================================================================
+

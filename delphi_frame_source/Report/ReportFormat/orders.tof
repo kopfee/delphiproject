@@ -1,0 +1,7 @@
+Orders Detail Report<%
+  DataEntry("Orders","Orders");
+%>
+CustNo      Company         OrderNo  Payment   ItemNo  PartNo
+----------------------------------------------------------------
+<%ForLoop("Orders")%><%FieldValue("CustNo","8")%><%FieldValue("Company","20","Center")%> <%FieldValue("OrderNo","10","Left")%><%FieldValue("PaymentMethod","10","Left")%><%FieldValue("ItemNo","8","Left")%><%FieldValue("PartNo","10","Left")%>
+<%EndLoop()%>----------------------------------------------------------------

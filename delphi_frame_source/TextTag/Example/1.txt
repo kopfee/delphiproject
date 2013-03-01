@@ -1,0 +1,1 @@
+<%tag<%tag \%> %>text\<%text\%\<c:\text\file.txt<%tag%>\<%text<%tag%> 

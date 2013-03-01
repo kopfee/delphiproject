@@ -1,0 +1,12 @@
+The Architecture Of MyLib
+
+1. Unit LibMessages 包含MyLib用到的自定义Windows消息代码
+
+2. Unit SafeCode    包含编写可靠代码的类似断言的判断
+
+3. Unit ComWriUtils : 编写组件的常用工具
+      消息过滤器
+      映射列表
+      安全调用器
+      公共属性组件
+

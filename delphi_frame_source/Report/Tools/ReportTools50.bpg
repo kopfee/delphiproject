@@ -1,0 +1,46 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = PropInsp50.bpl KSObjView50.bpl DKSObjView50.bpl KSUser50.bpl \
+  DKSUser50.bpl KSReport50.bpl ReportBuilder50.exe ReportBuilder50.ENU \
+  ReportBuilder50.CHS
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+ReportBuilder50.exe: ReportBuilder50.dpr
+  $(DCC)
+
+ReportBuilder50.ENU: ENU\ReportBuilder50.dpr
+  $(DCC)
+
+ReportBuilder50.CHS: CHS\ReportBuilder50.dpr
+  $(DCC)
+
+KSObjView50.bpl: ..\..\MyLib\KSObjView50.dpk
+  $(DCC)
+
+DKSObjView50.bpl: ..\..\MyLib\DKSObjView50.dpk
+  $(DCC)
+
+PropInsp50.bpl: ..\..\Import\zproplst\PropInsp50.dpk
+  $(DCC)
+
+KSUser50.bpl: ..\..\MyLib\KSUser50.dpk
+  $(DCC)
+
+DKSUser50.bpl: ..\..\MyLib\DKSUser50.dpk
+  $(DCC)
+
+KSReport50.bpl: ..\KSReport50.dpk
+  $(DCC)
+
+

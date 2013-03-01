@@ -1,0 +1,93 @@
+09:58:49 THDataset[00D58630] create.
+09:58:49 add listener
+09:58:49 add listener
+09:58:49 add listener
+09:58:59 TMSSQLAcs[00D59C98] create.
+09:58:59 trigerEvent0
+09:58:59 new dbaccess ok
+09:58:59 pool first
+09:58:59 pool dbaccess
+09:59:07 use pooled dbaccess
+09:59:07 add listener
+09:59:07 trigerEvent2
+09:59:07 trigerEvent3
+09:59:07 add listener
+09:59:07 trigerEvent4
+09:59:07 after dbresults :1
+09:59:07 nextResponse:1
+09:59:07 THDataset[00D59E78] create.
+09:59:07 add listener
+09:59:07 Field[name] Logic Data Type:3, Physical Data Type:47
+09:59:07 THField[00D5A3BC] create.
+09:59:07 Field[id] Logic Data Type:0, Physical Data Type:56
+09:59:07 THField[00D5A4C8] create.
+09:59:07 Field[uid] Logic Data Type:0, Physical Data Type:52
+09:59:07 THField[00D5A5BC] create.
+09:59:07 Field[type] Logic Data Type:3, Physical Data Type:47
+09:59:07 THField[00D5A660] create.
+09:59:07 Field[userstat] Logic Data Type:0, Physical Data Type:52
+09:59:07 THField[00D5A764] create.
+09:59:07 Field[sysstat] Logic Data Type:0, Physical Data Type:52
+09:59:07 THField[00D5A82C] create.
+09:59:07 Field[indexdel] Logic Data Type:0, Physical Data Type:52
+09:59:07 THField[00D5A8E8] create.
+09:59:07 Field[schema_ver] Logic Data Type:0, Physical Data Type:52
+09:59:07 THField[00D5A9EC] create.
+09:59:07 Field[refdate] Logic Data Type:4, Physical Data Type:61
+09:59:07 THField[00D5AAA4] create.
+09:59:07 Field[crdate] Logic Data Type:4, Physical Data Type:61
+09:59:07 THField[00D5ABA0] create.
+09:59:07 Field[version] Logic Data Type:0, Physical Data Type:56
+09:59:07 THField[00D5ACF4] create.
+09:59:07 Field[deltrig] Logic Data Type:0, Physical Data Type:56
+09:59:07 THField[00D5ADAC] create.
+09:59:07 Field[instrig] Logic Data Type:0, Physical Data Type:56
+09:59:07 THField[00D5AE64] create.
+09:59:07 Field[updtrig] Logic Data Type:0, Physical Data Type:56
+09:59:07 THField[00D563EC] create.
+09:59:07 Field[seltrig] Logic Data Type:0, Physical Data Type:56
+09:59:07 THField[00D59330] create.
+09:59:07 Field[category] Logic Data Type:0, Physical Data Type:56
+09:59:07 THField[00D588CC] create.
+09:59:07 Field[cache] Logic Data Type:0, Physical Data Type:52
+09:59:07 THField[00D520F8] create.
+09:59:07 Dataset[00D59E78] opened. fields : 17
+09:59:07 Dataset[00D59E78] read rows : 355
+09:59:07 THDataset[00D59E78] Datarows : 355
+09:59:07 remove listener
+09:59:07 trigerEvent4
+09:59:07 after dbresults :2
+09:59:07 trigerEvent5
+09:59:07 pool dbaccess
+09:59:07 remove listener
+09:59:07 nextResponse:0
+09:59:07 remove listener
+10:00:37 remove listener
+10:00:37 remove listener
+10:00:37 remove listener
+10:00:37 begin free THDataset
+10:00:37 THField[00D520F8] Destroy.
+10:00:37 THField[00D588CC] Destroy.
+10:00:37 THField[00D59330] Destroy.
+10:00:37 THField[00D563EC] Destroy.
+10:00:37 THField[00D5AE64] Destroy.
+10:00:37 THField[00D5ADAC] Destroy.
+10:00:37 THField[00D5ACF4] Destroy.
+10:00:37 THField[00D5ABA0] Destroy.
+10:00:37 THField[00D5AAA4] Destroy.
+10:00:37 THField[00D5A9EC] Destroy.
+10:00:37 THField[00D5A8E8] Destroy.
+10:00:37 THField[00D5A82C] Destroy.
+10:00:37 THField[00D5A764] Destroy.
+10:00:37 THField[00D5A660] Destroy.
+10:00:37 THField[00D5A5BC] Destroy.
+10:00:37 THField[00D5A4C8] Destroy.
+10:00:37 THField[00D5A3BC] Destroy.
+10:00:37 THDataset[00D59E78] Destroy.
+10:00:37 begin free THDataset
+10:00:37 THDataset[00D58630] Destroy.
+10:00:37 begin free TMSSQLAcs
+10:00:37 trigerEvent6
+10:00:37 trigerEvent1
+10:00:37 count=0
+10:00:37 TMSSQLAcs[00D59C98] Destroy.

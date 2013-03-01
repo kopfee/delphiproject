@@ -1,0 +1,14 @@
+[Server]
+IP=172.16.134.1
+Port=2000
+DestNo=0
+FuncNo=800
+
+[Input]
+RequestType=100105
+Count=1
+
+[I1]
+Name=wtsl
+Value=123456789012
+

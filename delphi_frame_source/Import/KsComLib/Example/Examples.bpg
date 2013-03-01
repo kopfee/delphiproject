@@ -1,0 +1,29 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = Simple2.exe PAutoTest.exe Simple.exe PTestObject.exe
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+Simple2.exe: Simple2.dpr
+  $(DCC)
+
+PAutoTest.exe: PAutoTest.dpr
+  $(DCC)
+
+Simple.exe: Simple.dpr
+  $(DCC)
+
+PTestObject.exe: PTestObject.dpr
+  $(DCC)
+
+

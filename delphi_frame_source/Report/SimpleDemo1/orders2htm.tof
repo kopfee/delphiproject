@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Orders Group Report</title>
+<%
+  DataEntry("Orders","Orders","CustNo|OrderNo");
+  FileName("Orders2.htm");
+%>
+</head>
+<body>
+<h1>Orders Group Report</h1>
+<table border="1" CELLSPACING="0" CELLPADDING="0" width="591" height="50">
+  <%ForLoop("Orders")%> 
+  <tr>
+    <td width="132" height="47"><%FieldValue("CustNo","8")%><br>
+      <%FieldValue("Company","20","Center")%></td>
+    <td width="453" height="47"> 
+      <table  border="1" CELLSPACING="0" CELLPADDING="0" width="452" height="100%">
+        <%ForLoop("Orders","0")%> 
+        <tr>
+          <td width="91"><%FieldValue("OrderNo","10","Left")%></td>
+          <td width="116"><%FieldValue("PaymentMethod","10","Left")%></td>
+          <td width="237"> 
+            <table width="236" height="100%">
+              <%ForLoop("Orders","1")%> 
+              <tr>
+                <td width="112"><%FieldValue("ItemNo","8","Left")%></td>
+                <td width="112"><%FieldValue("PartNo","10","Left")%></td>
+      </tr>
+      <%EndLoop()%>
+      </table>
+  </td>
+  </tr>
+  <%EndLoop()%>
+  </table>
+</td>
+</tr>
+<%EndLoop()%>
+</table>
+</body>
+</html>

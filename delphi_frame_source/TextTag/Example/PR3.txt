@@ -1,0 +1,22 @@
+<% #postfix("*.htm") %>
+<html>
+<head>
+<Title>Project Test</Title>
+</head>
+<body>
+<h1>Forms</h1>
+<% form(); %>
+<H2>Form : <% property("name"); %></H2>
+<BR>
+<h3>TLabel TButton</h3>
+<table border=1>
+<tr><td><B>Name</B></td><td><B>Caption</B></td><td><B>Font.Name</B></td><td><B>Font.Size</B></td></tr>
+<% component("TLabel","TButton"); %><tr><td><% property("Name"); %></td><td><% property("Caption"); %></td>
+<% persistent("Font"); %>
+<td><% property("Name"); %></td><td><% property("Size"); %></td>
+<% endpersistent(); %>
+</tr><% endcomponent(); %>
+</table>
+<% endform(); %>
+</body>
+</html>
