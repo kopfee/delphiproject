@@ -5,4 +5,4 @@
 __history
 *.drc
 *.map
-bin/*
+bin/*.exe
